@@ -19,35 +19,15 @@
                 <div class="nav-section">
                     <div class="nav-title">Начало игры</div>
                     <ul class="nav-links">
-                        <li class="active"><a href="#getting-started">Подключение к серверу</a></li>
+                        <li class="active"><a href="#discord-registration">Регистрация в Discord</a></li>
+                        <li><a href="#getting-started">Подключение к серверу</a></li>
                         <li><a href="#rules">Правила сервера</a></li>
-                        <li><a href="#registration">Регистрация</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav-section">
-                    <div class="nav-title">Игровой процесс</div>
-                    <ul class="nav-links">
-                        <li><a href="#economy">Экономика</a></li>
-                        <li><a href="#quests">Система квестов</a></li>
-                        <li><a href="#clans">Кланы</a></li>
-                        <li><a href="#magic">Магическая система</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav-section">
-                    <div class="nav-title">Донат и привилегии</div>
-                    <ul class="nav-links">
-                        <li><a href="#ranks">Ранги</a></li>
-                        <li><a href="#donate">Как поддержать</a></li>
                     </ul>
                 </div>
 
                 <div class="nav-section">
                     <div class="nav-title">Полезное</div>
                     <ul class="nav-links">
-                        <li><a href="#faq">Частые вопросы</a></li>
-                        <li><a href="#commands">Команды</a></li>
                         <li><a href="#support">Техподдержка</a></li>
                     </ul>
                 </div>
@@ -69,23 +49,43 @@
                     </div>
                 </div>
 
+                <section id="discord-registration" class="content-section">
+                    <h2>Регистрация в Discord</h2>
+                    <p>Перед началом игры необходимо зарегистрироваться в нашем Discord-сообществе.</p>
+
+                    <div class="card">
+                        <h4>Инструкция по регистрации</h4>
+                        <ol>
+                            <li>Перейдите по ссылке: <a href="https://discord.gg/2Sc83ZvjNF" target="_blank" class="link-button">https://discord.gg/2Sc83ZvjNF</a></li>
+                            <li>Примите правила сервера в соответствующем канале</li>
+                            <li>Заполните форму регистрации в канале #регистрация</li>
+                            <li>Дождитесь подтверждения от модератора</li>
+                            <li>После подтверждения вы получите доступ ко всем каналам сервера</li>
+                        </ol>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <strong>Важно:</strong> Без регистрации в Discord вы не сможете получить полный доступ к функциям сервера и участию в ивентах.
+                    </div>
+                </section>
+
                 <section id="getting-started" class="content-section">
-                    <h2>Начало игры</h2>
-                    <p>Добро пожаловать на Story Time! Это руководство поможет вам начать игру на нашем сервере.</p>
+                    <h2>Подключение к серверу</h2>
+                    <p>После регистрации в Discord вы можете подключиться к нашему серверу.</p>
                     
-                    <h3>Настройка по подключению к серверу</h3>
+                    <h3>Настройка подключения к серверу</h3>
                     <ol>
                         <li><a href="assemblies.html" class="link-button">Скачайте нашу сборку по майкрафт</a></li>
                         <li>Запустите Minecraft Java Edition версии <strong>1.21.1</strong></li>
                         <li>Проверте что все работает исправно</li>
                         <li>В главном меню нажмите "Сетевая игра"</li>
                         <li>Нажмите "Добавить сервер"</li>
-                        <li>В поле "Адрес сервера" введите: <a href="#" onclick="connectToServer() return false;"><code>story-time.playit.plus</code></a></li>
+                        <li>В поле "Адрес сервера" введите: <a href="#" onclick="connectToServer(); return false;" class="link-button"><code>story-time.playit.plus</code></a></li>
                         <li>Нажмите "Готово" и подключитесь к серверу</li>
                     </ol>
 
                     <div class="alert alert-info">
-                        <strong>Важно:</strong> Для полного доступа к функциям сервера рекомендуется использовать наши ресурпаки, они уже свтроенный в сборку.
+                        <strong>Важно:</strong> Для полного доступа к функциям сервера рекомендуется использовать наши ресурпаки, они уже встроенные в сборку.
                     </div>
                 </section>
 
@@ -121,105 +121,13 @@
                     </div>
                 </section>
 
-                <section id="economy" class="content-section">
-                    <h2>Экономика</h2>
-                    <p>На сервере действует сложная экономическая система с несколькими способами заработка.</p>
-
-                    <h3>Валюта</h3>
-                    <p>Основная валюта - <strong>Рубины</strong> (Ruby).</p>
-
-                    <h3>Способы заработка</h3>
-                    <ul>
-                        <li>Выполнение квестов</li>
-                        <li>Торговля с другими игроками</li>
-                        <li>Продажа ресурсов в магазине</li>
-                        <li>Участие в ивентах</li>
-                        <li>Исследование подземелий</li>
-                    </ul>
-
-                    <h3>Основные команды</h3>
-                    <div class="code-block">
-                        <span class="command">/bal</span> - Проверить баланс<br>
-                        <span class="command">/pay [игрок] [сумма]</span> - Перевести деньги<br>
-                        <span class="command">/shop</span> - Открыть магазин<br>
-                        <span class="command">/ah</span> - Аукцион
-                    </div>
-                </section>
-
-                <section id="ranks" class="content-section">
-                    <h2>Система рангов</h2>
-                    <p>Ранги предоставляют дополнительные возможности и привилегии на сервере.</p>
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Ранг</th>
-                                <th>Стоимость</th>
-                                <th>Основные возможности</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="badge">Traveler</span></td>
-                                <td>Бесплатно</td>
-                                <td>Базовые возможности, 1 дома</td>
-                            </tr>
-                            <tr>
-                                <td><span class="badge badge-success">Adventurer</span></td>
-                                <td>299 руб</td>
-                                <td>3 дома, цветные ники, /hat</td>
-                            </tr>
-                            <tr>
-                                <td><span class="badge badge-warning">Hero</span></td>
-                                <td>599 руб</td>
-                                <td>5 домов, полеты, приватные варпы</td>
-                            </tr>
-                            <tr>
-                                <td><span class="badge" style="background-color: #a371f7;">Legend</span></td>
-                                <td>999 руб</td>
-                                <td>10 домов, все возможности Hero + эксклюзивные питомцы</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="alert alert-info">
-                        <strong>Примечание:</strong> Все донаты идут на развитие сервера и оплату хостинга.
-                    </div>
-                </section>
-
-                <section id="faq" class="content-section">
-                    <h2>Частые вопросы</h2>
-
-                    <h3>Как защитить свою территорию?</h3>
-                    <p>Используйте золотую кирку чтобы создать регион. Команды: <span class="command">/rg claim</span>, <span class="command">/rg addmember</span></p>
-
-                    <h3>Я новичок, с чего начать?</h3>
-                    <p>Начните с выполнения стартовых квестов (<span class="command">/quest</span>), они познакомят вас с основными механиками.</p>
-
-                    <h3>Как телепортироваться к другу?</h3>
-                    <p>Используйте <span class="command">/tpa [ник]</span> для запроса телепортации.</p>
-
-                    <h3>Пропали вещи после смерти!</h3>
-                    <p>На сервере включена система могил. Используйте <span class="command">/grave</span> чтобы найти свою могилу.</p>
-                </section>
-
                 <section id="support" class="content-section">
                     <h2>Связь с нами</h2>
                     <p>Если у вас возникли проблемы или вопросы, вы можете связаться с нами:</p>
                     
                     <div class="card">
                         <h4>Discord</h4>
-                        <p>Присоединяйтесь к нашему Discord-сообществу: <strong>https://discord.gg/eldoria</strong></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>VK группа</h4>
-                        <p>Следите за обновлениями: <strong>https://vk.com/eldoria_mc</strong></p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>Техподдержка</h4>
-                        <p>Для срочных вопросов: <strong>support@eldoria.ru</strong></p>
+                        <p>Присоединяйтесь к нашему Discord-сообществу: <a href="https://discord.gg/2Sc83ZvjNF" target="_blank" class="link-button"><strong>https://discord.gg/2Sc83ZvjNF</strong></a></p>
                     </div>
                 </section>
 

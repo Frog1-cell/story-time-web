@@ -16,6 +16,9 @@ function connectToServer() {
             notification.remove();
         }, 3000);
     });
+    
+    // Предотвращаем переход по ссылке
+    return false;
 }
 
 // Плавная прокрутка для навигации
