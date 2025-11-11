@@ -1,20 +1,3 @@
-// Копирование IP адреса
-document.getElementById('copyIpBtn').addEventListener('click', function() {
-    const ip = 'play.eldoria.ru';
-    navigator.clipboard.writeText(ip).then(() => {
-        const originalHTML = this.innerHTML;
-        this.innerHTML = '<i class="fas fa-check"></i>';
-        this.style.color = '#3fb950';
-        
-        setTimeout(() => {
-            this.innerHTML = originalHTML;
-            this.style.color = '';
-        }, 2000);
-    }).catch(err => {
-        console.error('Ошибка копирования: ', err);
-    });
-});
-
 // Плавная прокрутка для навигации
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
