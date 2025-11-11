@@ -2,7 +2,6 @@
 function connectToServer() {
     const ip = 'story-time.playit.plus';
     navigator.clipboard.writeText(ip).then(() => {
-        // Показываем уведомление о копировании
         const notification = document.createElement('div');
         notification.style.cssText = `
             position: fixed; top: 20px; right: 20px; background: var(--github-success); 
@@ -12,62 +11,37 @@ function connectToServer() {
         notification.textContent = 'IP скопирован! Вставьте в Minecraft.';
         document.body.appendChild(notification);
         
-        setTimeout(() => {
-            notification.remove();
-        }, 3000);
+        setTimeout(() => notification.remove(), 3000);
     });
-    
-    // Предотвращаем переход по ссылке
     return false;
 }
 
-// Плавная прокрутка для навигации
-document.querySelectorAll('.nav-links a').forEach(link => {
+// Плавная прокрутка для внутренних ссылок
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        
         if (targetElement) {
             window.scrollTo({
                 top: targetElement.offsetTop - 100,
                 behavior: 'smooth'
             });
-            updateActiveNav(this.getAttribute('href'));
         }
     });
 });
 
-// Обновление активного пункта меню
-function updateActiveNav(targetHref) {
-    document.querySelectorAll('.nav-links li').forEach(li => {
-        li.classList.remove('active');
-    });
-    
-    const activeLink = document.querySelector(`.nav-links a[href="${targetHref}"]`);
-    if (activeLink) {
-        activeLink.parentElement.classList.add('active');
-    }
-}
-
-// Обновление активного пункта меню при прокрутке
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.content-section');
-    let current = '';
-    
-    sections.forEach(section => {
-        if (window.scrollY >= section.offsetTop - 150) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    if (current) {
-        updateActiveNav(`#${current}`);
-    }
-});
-
-// Добавление класса загрузки
+// Подсветка активного пункта при загрузке
 document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
+            link.parentElement.classList.add('active');
+        } else {
+            link.parentElement.classList.remove('active');
+        }
+    });
     document.body.classList.add('loaded');
 });
 
