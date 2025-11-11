@@ -48,28 +48,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Динамическое обновление статистики (пример)
-function updateViewCount() {
-    const viewCountElement = document.querySelector('.meta-item:nth-child(3) strong');
-    if (viewCountElement) {
-        const currentViews = parseInt(viewCountElement.textContent.replace(',', '')) || 1247;
-        viewCountElement.textContent = (currentViews + 1).toLocaleString();
-    }
-}
-
-// Имитация увеличения счетчика просмотров
-document.addEventListener('DOMContentLoaded', function() {
-    updateViewCount();
-    
-    // Обновление времени последнего изменения
-    const lastUpdated = document.querySelector('.meta-item:nth-child(2) strong');
-    if (lastUpdated) {
-        const now = new Date();
-        const options = { day: 'numeric', month: 'long', year: 'numeric' };
-        lastUpdated.textContent = now.toLocaleDateString('ru-RU', options);
-    }
-});
-
 // Добавление класса загрузки для плавного появления
 document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
@@ -83,31 +61,4 @@ window.addEventListener('resize', () => {
     resizeTimer = setTimeout(() => {
         document.body.classList.remove('resizing');
     }, 250);
-});
-// Обновление активности в реальном времени
-function updateActivity() {
-    const activities = [
-        { user: "Player123", action: "завершил квест 'Драконья пещера'", time: "5 минут назад" },
-        { user: "BuilderPro", action: "построил новый город", time: "15 минут назад" },
-        { user: "Miner42", action: "нашел редкий ресурс", time: "30 минут назад" }
-    ];
-    
-    const activityContainer = document.querySelector('.meta-section:last-child');
-    if (activityContainer) {
-        // Можно добавить динамическое обновление активности
-    }
-}
-
-// Инициализация при загрузке
-document.addEventListener('DOMContentLoaded', function() {
-    updateViewCount();
-    updateActivity();
-    
-    // Обновление времени последнего изменения
-    const lastUpdated = document.querySelector('.meta-item:nth-child(2) .meta-value');
-    if (lastUpdated) {
-        const now = new Date();
-        const options = { day: 'numeric', month: 'long', year: 'numeric' };
-        lastUpdated.textContent = now.toLocaleDateString('ru-RU', options);
-    }
 });
