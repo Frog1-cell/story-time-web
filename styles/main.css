@@ -568,3 +568,24 @@ body {
         padding: 16px 20px;
     }
 }
+.link-button {
+    color: var(--github-accent);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.link-button:hover {
+    border-bottom-color: var(--github-accent);
+    background: rgba(88, 166, 255, 0.1);
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.download-btn:hover {
+    background: #2ea043 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(63, 185, 80, 0.4);
+}

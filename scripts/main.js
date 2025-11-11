@@ -1,3 +1,23 @@
+// Функция подключения к серверу
+function connectToServer() {
+    const ip = 'story-time.playit.plus';
+    navigator.clipboard.writeText(ip).then(() => {
+        // Показываем уведомление о копировании
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed; top: 20px; right: 20px; background: var(--github-success); 
+            color: white; padding: 12px 20px; border-radius: 6px; 
+            font-weight: 500; z-index: 10000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        `;
+        notification.textContent = 'IP скопирован! Вставьте в Minecraft.';
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    });
+}
+
 // Плавная прокрутка для навигации
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -10,8 +30,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
                 top: targetElement.offsetTop - 100,
                 behavior: 'smooth'
             });
-
-            // Обновление активного пункта меню
             updateActiveNav(this.getAttribute('href'));
         }
     });
@@ -35,10 +53,7 @@ window.addEventListener('scroll', () => {
     let current = '';
     
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.scrollY >= sectionTop - 150) {
+        if (window.scrollY >= section.offsetTop - 150) {
             current = section.getAttribute('id');
         }
     });
@@ -48,12 +63,12 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Добавление класса загрузки для плавного появления
+// Добавление класса загрузки
 document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
 });
 
-// Обработка ресайза окна
+// Обработка ресайза
 let resizeTimer;
 window.addEventListener('resize', () => {
     document.body.classList.add('resizing');

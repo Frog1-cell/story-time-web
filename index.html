@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eldoria MC | Документация</title>
+    <title>Story Time | Документация</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
     <div class="container">
-        <!-- Left Sidebar -->
         <div class="sidebar sidebar-left">
             <div class="sidebar-content">
                 <div class="server-info">
-                    <div class="server-name">Eldoria RPG</div>
+                    <div class="server-name">Story Time</div>
                 </div>
 
                 <div class="nav-section">
-                    <div class="nav-title">Начало работы</div>
+                    <div class="nav-title">Начало игры</div>
                     <ul class="nav-links">
                         <li class="active"><a href="#getting-started">Подключение к серверу</a></li>
                         <li><a href="#rules">Правила сервера</a></li>
@@ -55,37 +54,38 @@
             </div>
         </div>
 
-        <!-- Main Content -->
         <div class="main-content">
             <div class="content-wrapper">
                 <div class="header">
-                    <h1>Документация Eldoria RPG</h1>
-                    <p>Полное руководство по магическому миру Eldoria</p>
+                    <h1>Документация Story Time</h1>
+                    <p>Полное руководство по майкрафт проекту Story Time</p>
                     
                     <div class="breadcrumbs">
                         <a href="#">Главная</a>
                         <span class="breadcrumb-separator">/</span>
                         <a href="#">Документация</a>
                         <span class="breadcrumb-separator">/</span>
-                        <span class="current">Eldoria RPG</span>
+                        <span class="current">Story Time</span>
                     </div>
                 </div>
 
                 <section id="getting-started" class="content-section">
-                    <h2>Начало работы</h2>
-                    <p>Добро пожаловать на Eldoria RPG! Это руководство поможет вам начать игру на нашем сервере.</p>
+                    <h2>Начало игры</h2>
+                    <p>Добро пожаловать на Story Time! Это руководство поможет вам начать игру на нашем сервере.</p>
                     
-                    <h3>Подключение к серверу</h3>
+                    <h3>Настройка по подключению к серверу</h3>
                     <ol>
-                        <li>Запустите Minecraft Java Edition версии <strong>1.19.2</strong></li>
+                        <li><a href="assemblies.html" class="link-button">Скачайте нашу сборку по майкрафт</a></li>
+                        <li>Запустите Minecraft Java Edition версии <strong>1.21.1</strong></li>
+                        <li>Проверте что все работает исправно</li>
                         <li>В главном меню нажмите "Сетевая игра"</li>
                         <li>Нажмите "Добавить сервер"</li>
-                        <li>В поле "Адрес сервера" введите: <code>play.eldoria.ru</code></li>
+                        <li>В поле "Адрес сервера" введите: <a href="#" onclick="connectToServer() return false;"><code>story-time.playit.plus</code></a></li>
                         <li>Нажмите "Готово" и подключитесь к серверу</li>
                     </ol>
 
                     <div class="alert alert-info">
-                        <strong>Важно:</strong> Для полного доступа к функциям сервера рекомендуется установить наш ресурспак.
+                        <strong>Важно:</strong> Для полного доступа к функциям сервера рекомендуется использовать наши ресурпаки, они уже свтроенный в сборку.
                     </div>
                 </section>
 
@@ -96,12 +96,24 @@
                     <div class="card">
                         <h4>Основные правила</h4>
                         <ol>
-                            <li>Запрещено использование читов, x-ray и других запрещенных модификаций</li>
-                            <li>Запрещено гриферить и воровать чужие постройки</li>
-                            <li>Уважайте других игроков, не допускается оскорбление и травля</li>
-                            <li>Запрещен несанкционированный PvP в безопасных зонах</li>
-                            <li>Не злоупотребляйте багами игры - сообщайте о них администрации</li>
+                            <li><strong>Запрещено использование читов и посторонних программ</strong><br>
+                                • Fly, KillAura, SpeedHack, X-Ray (и любые текстуры/моды, вскрывающие руды)<br>
+                                • Auto-Clicker (если не для ферм в одиночной игре), Reach и другие программы, дающие нечестное преимущество</li>
+                            <li><strong>Запрещены любые виды дюпов (дублирования предметов)</strong><br>
+                                • Баг верстака, редстоуна, поршней, жерла Края или любой другой метод эксплуатации ошибок игры</li>
+                            <li><strong>Гриферство и воровство</strong><br>
+                                • <em>На сервере это разрешено</em>. Конфликты решаются между игроками. Администрация не участвует и не возвращает украденное</li>
+                            <li><strong>Не злоупотребляйте лаг-машинами</strong><br>
+                                • Сознательное создание конструкций, вызывающих критическое падение TPS/FPS на сервере, запрещено</li>
                         </ol>
+                        
+                        <div style="margin-top: 20px; padding: 12px; background: rgba(88, 166, 255, 0.1); border-left: 3px solid var(--github-accent);">
+                            <strong>Важные моменты:</strong>
+                            <ul style="margin-top: 8px; padding-left: 20px;">
+                                <li>Кто не ознакомился с правилами — это его проблемы. Незнание правил не освобождает от ответственности</li>
+                                <li>Администрация оставляет за собой право принимать меры в спорных ситуациях на свое усмотрение</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="alert alert-warning">
@@ -213,7 +225,7 @@
 
                 <footer class="content-footer">
                     <div class="footer-content">
-                        <p>© 2024 Eldoria RPG. Все права защищены.</p>
+                        <p>© 2024 Story Time. Все права защищены.</p>
                         <div class="footer-links">
                             <a href="#">Политика конфиденциальности</a>
                             <a href="#">Условия использования</a>
@@ -224,25 +236,14 @@
             </div>
         </div>
 
-        <!-- Right Sidebar -->
         <div class="sidebar sidebar-right">
             <div class="sidebar-content">
                 <div class="meta-info">
-                    <!-- Информация -->
                     <div class="meta-section">
                         <h4>Информация</h4>
                         <div class="meta-item">
                             <span class="meta-label">Создатель:</span>
-                            <span class="meta-value">AlexTheDev</span>
-                        </div>
-                    </div>
-
-                    <!-- Статистика — только игроки -->
-                    <div class="meta-section">
-                        <h4>Статистика</h4>
-                        <div class="meta-item">
-                            <span class="meta-label">Игроков онлайн:</span>
-                            <span class="meta-value">47/100</span>
+                            <span class="meta-value">Frog_o21</span>
                         </div>
                     </div>
                 </div>
