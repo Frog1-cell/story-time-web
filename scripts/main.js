@@ -1,4 +1,3 @@
-// Функция подключения к серверу
 function connectToServer() {
     const ip = 'story-time.playit.plus';
     navigator.clipboard.writeText(ip).then(() => {
@@ -16,36 +15,69 @@ function connectToServer() {
     return false;
 }
 
-// Плавная прокрутка для внутренних ссылок
+
+function highlightActivePage() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        const linkPath = href.split('#')[0]; 
+
+
+        link.parentElement.classList.remove('active');
+
+
+        if (linkPath === currentPath || 
+            (currentPath === '' && linkPath === 'index.html') ||
+            (currentPath === 'index.html' && linkPath === 'index.html')) {
+            link.parentElement.classList.add('active');
+        }
+    });
+}
+
+
 document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 100,
-                behavior: 'smooth'
-            });
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventEventListener();
+            const targetId = href;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+
+                document.querySelectorAll('.nav-links li').forEach(li => li.classList.remove('active'));
+                this.parentElement.classList.add('active');
+            }
         }
     });
 });
 
-// Подсветка активного пункта при загрузке
-document.addEventListener('DOMContentLoaded', function() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
-            link.parentElement.classList.add('active');
-        } else {
-            link.parentElement.classList.remove('active');
+
+document.querySelectorAll('.nav-links a[href$=".html"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && !href.startsWith('#')) {
+
+            document.body.classList.remove('loaded');
         }
     });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    highlightActivePage(); 
     document.body.classList.add('loaded');
 });
 
-// Обработка ресайза
+
+window.addEventListener('popstate', highlightActivePage);
+
+
 let resizeTimer;
 window.addEventListener('resize', () => {
     document.body.classList.add('resizing');
