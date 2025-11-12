@@ -14,7 +14,7 @@ function connectToServer() {
     });
     return false;
 }
-
+ 
 
 function highlightActivePage() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
@@ -41,7 +41,7 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (href.startsWith('#')) {
-            e.preventEventListener();
+            e.preventDefault(); 
             const targetId = href;
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
