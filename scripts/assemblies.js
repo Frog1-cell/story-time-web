@@ -1,4 +1,3 @@
-
 let selectedAssembly = null;
 
 function openModal() {
@@ -22,8 +21,8 @@ function selectAssembly(assembly) {
     document.querySelectorAll('.assembly-option').forEach(option => {
         option.classList.remove('selected');
     });
-    
 
+    
     event.currentTarget.classList.add('selected');
 }
 
@@ -37,57 +36,40 @@ function updateDownloadButton() {
     const downloadBtn = document.getElementById('downloadBtn');
     if (selectedAssembly) {
         downloadBtn.disabled = false;
-        downloadBtn.innerHTML = `<i class="fas fa-download"></i> Скачать ${getAssemblyName(selectedAssembly)}`;
+        downloadBtn.innerHTML = `<i class="fas fa-external-link-alt"></i> Перейти к скачиванию`;
     } else {
         downloadBtn.disabled = true;
-        downloadBtn.innerHTML = `<i class="fas fa-download"></i> Скачать выбранную сборку`;
+        downloadBtn.innerHTML = `<i class="fas fa-external-link-alt"></i> Перейти к скачиванию`;
     }
-}
-
-function getAssemblyName(assembly) {
-    const names = {
-        'standard': 'Standard Version',
-        'modified_files': 'Standard Version Modified (Files)',
-        'modified_full': 'Standard Version Modified (Full)'
-    };
-    return names[assembly] || 'сборку';
 }
 
 function downloadSelected() {
     if (!selectedAssembly) return;
     
 
-    const filePaths = {
-        'standard': 'assemblies/S-V.zip',
-        'modified_files': 'assemblies/S-V-M-FS.zip',
-        'modified_full': 'assemblies/S-V-M-FF.zip'
+    const googleDiskLinks = {
+        'standard': 'https://drive.google.com/drive/folders/ТВОЯ_ССЫЛКА_1',
+        'modified_files': 'https://drive.google.com/drive/folders/ТВОЯ_ССЫЛКА_2',
+        'modified_full': 'https://drive.google.com/drive/folders/ТВОЯ_ССЫЛКА_3'
     };
     
-    const filePath = filePaths[selectedAssembly];
-    const fileName = filePath.split('/').pop();
+    const googleDiskLink = googleDiskLinks[selectedAssembly];
     
 
-    const link = document.createElement('a');
-    link.href = filePath;
-    link.download = fileName;
-    link.style.display = 'none';
-    
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(googleDiskLink, '_blank');
     
 
-    showDownloadNotification(fileName);
+    showRedirectNotification();
     closeModal();
 }
 
-function showDownloadNotification(fileName) {
+function showRedirectNotification() {
     const notification = document.createElement('div');
     notification.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
-        background: var(--github-success);
+        background: var(--github-accent);
         color: white;
         padding: 16px 24px;
         border-radius: 8px;
@@ -99,10 +81,10 @@ function showDownloadNotification(fileName) {
         gap: 10px;
     `;
     notification.innerHTML = `
-        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-external-link-alt"></i>
         <div>
-            <div>Сборка скачивается</div>
-            <div style="font-size: 0.9rem; opacity: 0.9;">${fileName}</div>
+            <div>Открывается Google Disk</div>
+            <div style="font-size: 0.9rem; opacity: 0.9;">Скачайте файл оттуда</div>
         </div>
     `;
     
@@ -110,7 +92,7 @@ function showDownloadNotification(fileName) {
     
     setTimeout(() => {
         notification.remove();
-    }, 4000);
+    }, 3000);
 }
 
 
