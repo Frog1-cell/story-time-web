@@ -85,14 +85,14 @@
 
                             <div class="feature-highlight">
                                 <h5><i class="fas fa-bolt"></i> Преимущества наших сборок</h5>
-                                <p>Все сборки предварительно протестированы, оптимизированы и содержат необходимые ресурспаки сервера для полного погружения в игру, вы также можете модифицировать их под себя, но не нарушая правил сервера</p>
+                                <p>Все сборки предварительно протестированы, оптимизированы и содержат необходимые ресурспаки сервера для полного погружения в игру, также вы можете кастомизировать сборки под себя без нарушения правил</p>
                             </div>
 
                             <div class="installation-guide">
                                 <h4><i class="fas fa-info-circle"></i> Универсальная инструкция по установке</h4>
                                 <ol class="installation-steps">
                                     <li><i class="fas fa-file-archive"></i> Скачайте архив и загрузите в лаунчер</li>
-                                    <li><i class="fas fa-folder"></i> Если ваш лаунчер не поддерживает загрузку сборок, то скачайте папку со всем материалом и разместите по папкам</li>
+                                    <li><i class="fas fa-folder"></i> Если вы скачиваете только папку, то разместите после скачивания файлы по своим местам </li>
                                     <li><i class="fas fa-play"></i> Запустите лаунчер и выберите соответствующий профиль</li>
                                     <li><i class="fas fa-check"></i> Готово! Подключайтесь к серверу</li>
                                 </ol>
@@ -118,7 +118,7 @@
         </div>
     </div>
 
-    <!-- Модальное окно выбора сборки -->
+
     <div class="modal-overlay" id="downloadModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -127,59 +127,48 @@
             </div>
             
             <div class="assembly-options">
-                <div class="assembly-option" onclick="selectAssembly('lite')">
-                    <div class="option-header">
-                        <div class="option-title">Lite Version</div>
-                        <div class="option-badge">Рекомендуется</div>
-                    </div>
-                    <div class="option-description">
-                        Базовая сборка с оптимизацией для слабых компьютеров. Минимальные моды, максимальная производительность.
-                    </div>
-                    <div class="option-details">
-                        <span>Версия: 1.21.1</span>
-                        <span class="option-size">85 МБ</span>
-                    </div>
-                </div>
 
                 <div class="assembly-option" onclick="selectAssembly('standard')">
                     <div class="option-header">
                         <div class="option-title">Standard Version</div>
-                        <div class="option-badge">Популярная</div>
+                        <div class="option-badge">Стандартная</div>
                     </div>
                     <div class="option-description">
-                        Сбалансированная сборка с оптимальным набором модов. Подходит для большинства игроков.
+                        Стандартная сборка с оптимальным набором модов и ресурспаков. Подходит для большинства игроков.
                     </div>
                     <div class="option-details">
-                        <span>Версия: 1.21.1</span>
-                        <span class="option-size">150 МБ</span>
+                        <span>Версия: 1.0.0</span>
+                        <span class="option-size">??? МБ</span>
                     </div>
                 </div>
 
-                <div class="assembly-option" onclick="selectAssembly('full')">
+
+                <div class="assembly-option" onclick="selectAssembly('modified_files')">
                     <div class="option-header">
-                        <div class="option-title">Full Version</div>
-                        <div class="option-badge">Полная</div>
+                        <div class="option-title">Standard Version Modified (from frog)</div>
+                        <div class="option-badge">Только файлы</div>
                     </div>
                     <div class="option-description">
-                        Полный набор модов и оптимизаций. Улучшенная графика, дополнительные возможности.
+                        Модифицированная версия от Frog. Только файлы для ручной установки.
                     </div>
                     <div class="option-details">
-                        <span>Версия: 1.21.1</span>
-                        <span class="option-size">220 МБ</span>
+                        <span>Версия: 1.0.0</span>
+                        <span class="option-size">??? МБ</span>
                     </div>
                 </div>
 
-                <div class="assembly-option" onclick="selectAssembly('ultra')">
+
+                <div class="assembly-option" onclick="selectAssembly('modified_full')">
                     <div class="option-header">
-                        <div class="option-title">Ultra Version</div>
-                        <div class="option-badge">Максимальная</div>
+                        <div class="option-title">Standard Version Modified (from frog)</div>
+                        <div class="option-badge">Полная сборка</div>
                     </div>
                     <div class="option-description">
-                        Максимальный набор функций. Шейдеры, HD текстуры, все доступные моды. Только для мощных ПК.
+                        Модифицированная версия от Frog. Полная готовая сборка для установки.
                     </div>
                     <div class="option-details">
                         <span>Версия: 1.21.1</span>
-                        <span class="option-size">450 МБ</span>
+                        <span class="option-size">391 МБ</span>
                     </div>
                 </div>
             </div>

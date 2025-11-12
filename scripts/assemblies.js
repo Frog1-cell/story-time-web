@@ -1,4 +1,4 @@
-// scripts/assemblies.js
+
 let selectedAssembly = null;
 
 function openModal() {
@@ -18,12 +18,12 @@ function selectAssembly(assembly) {
     selectedAssembly = assembly;
     updateDownloadButton();
     
-    // Сбрасываем выделение у всех вариантов
+
     document.querySelectorAll('.assembly-option').forEach(option => {
         option.classList.remove('selected');
     });
     
-    // Выделяем выбранный вариант
+
     event.currentTarget.classList.add('selected');
 }
 
@@ -46,10 +46,9 @@ function updateDownloadButton() {
 
 function getAssemblyName(assembly) {
     const names = {
-        'lite': 'Lite Version',
-        'standard': 'Standard Version', 
-        'full': 'Full Version',
-        'ultra': 'Ultra Version'
+        'standard': 'Standard Version',
+        'modified_files': 'Standard Version Modified (Files)',
+        'modified_full': 'Standard Version Modified (Full)'
     };
     return names[assembly] || 'сборку';
 }
@@ -57,18 +56,17 @@ function getAssemblyName(assembly) {
 function downloadSelected() {
     if (!selectedAssembly) return;
     
-    // Пути к файлам в папке assemblies
+
     const filePaths = {
-        'lite': 'assemblies/storytime-lite-v2.1.0.zip',
-        'standard': 'assemblies/storytime-standard-v2.1.0.zip',
-        'full': 'assemblies/storytime-full-v2.1.0.zip',
-        'ultra': 'assemblies/storytime-ultra-v2.1.0.zip'
+        'standard': 'assemblies/S-V.zip',
+        'modified_files': 'assemblies/S-V-M-FS.zip',
+        'modified_full': 'assemblies/S-V-M-FF.zip'
     };
     
     const filePath = filePaths[selectedAssembly];
     const fileName = filePath.split('/').pop();
     
-    // Создаем временную ссылку для скачивания
+
     const link = document.createElement('a');
     link.href = filePath;
     link.download = fileName;
@@ -78,7 +76,7 @@ function downloadSelected() {
     link.click();
     document.body.removeChild(link);
     
-    // Показываем уведомление
+
     showDownloadNotification(fileName);
     closeModal();
 }
@@ -115,7 +113,7 @@ function showDownloadNotification(fileName) {
     }, 4000);
 }
 
-// Закрытие модального окна по клику вне его
+
 document.addEventListener('click', function(event) {
     const modal = document.getElementById('downloadModal');
     if (event.target === modal) {
@@ -123,7 +121,7 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Закрытие по ESC
+
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeModal();
