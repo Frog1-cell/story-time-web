@@ -48,9 +48,7 @@ function downloadSelected() {
     
 
     const googleDiskLinks = {
-        'standard': 'https://drive.google.com/drive/folders/ТВОЯ_ССЫЛКА_1',
-        'modified_files': 'https://drive.google.com/drive/folders/ТВОЯ_ССЫЛКА_2',
-        'modified_full': 'https://drive.google.com/drive/folders/ТВОЯ_ССЫЛКА_3'
+        'standard': 'https://drive.google.com/file/d/1hPdGUxRHPIclfvHGUABl9uoDMq8H72sV/view?usp=sharing'
     };
     
     const googleDiskLink = googleDiskLinks[selectedAssembly];
