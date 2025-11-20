@@ -48,7 +48,8 @@ function downloadSelected() {
     
 
     const googleDiskLinks = {
-        'standard': 'https://drive.google.com/file/d/1hPdGUxRHPIclfvHGUABl9uoDMq8H72sV/view?usp=sharing'
+        'standard': 'https://drive.google.com/file/d/1hPdGUxRHPIclfvHGUABl9uoDMq8H72sV/view?usp=sharing',
+        'enhanced': 'https://drive.google.com/file/d/1bmq64GR2j4PZljDMuIBKprQo9ukf7_JU/view?usp=sharing'
     };
     
     const googleDiskLink = googleDiskLinks[selectedAssembly];

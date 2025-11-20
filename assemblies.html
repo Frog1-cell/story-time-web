@@ -34,6 +34,7 @@
                         <li><a href="index.html#discord-registration"><i class="fab fa-discord fa-fw"></i> Регистрация в Discord</a></li>
                         <li><a href="index.html#getting-started"><i class="fas fa-plug fa-fw"></i> Подключение к серверу</a></li>
                         <li><a href="index.html#rules"><i class="fas fa-gavel fa-fw"></i> Правила сервера</a></li>
+                        <li><a href="index.html#discord-rules"><i class="fas fa-scroll fa-fw"></i> Правила Discord</a></li>
                     </ul>
                 </div>
 
@@ -100,7 +101,6 @@
                                 <h4><i class="fas fa-info-circle"></i> Универсальная инструкция по установке</h4>
                                 <ol class="installation-steps">
                                     <li><i class="fas fa-file-archive"></i> Скачайте архив и загрузите в лаунчер</li>
-                                    <li><i class="fas fa-folder"></i> Если вы скачиваете только папку, то разместите после скачивания файлы по своим местам </li>
                                     <li><i class="fas fa-play"></i> Запустите лаунчер и выберите соответствующий профиль</li>
                                     <li><i class="fas fa-check"></i> Готово! Подключайтесь к серверу</li>
                                 </ol>
@@ -126,7 +126,6 @@
         </div>
     </div>
 
-
     <div class="modal-overlay" id="downloadModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -149,7 +148,21 @@
                     </div>
                 </div>
 
-    
+                <div class="assembly-option" onclick="selectAssembly('enhanced')">
+                    <div class="option-header">
+                        <div class="option-title">Optimal Version</div>
+                        <div class="option-badge">Расширенная</div>
+                    </div>
+                    <div class="option-description">
+                        Расширенная сборка с дополнительными модами для улучшения графики и производительности, а также рекомендуемая для полного покружения и удобвства.
+                    </div>
+                    <div class="option-details">
+                        <span>Версия: 1.21.1</span>
+                        <span class="option-size">382 МБ</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="modal-actions">
                 <button class="btn-secondary" onclick="closeModal()">Отмена</button>
                 <button class="btn-primary" onclick="downloadSelected()" id="downloadBtn" disabled>
