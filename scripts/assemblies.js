@@ -53,7 +53,7 @@ function confirmDownload() {
     
     const googleDiskLinks = {
         'standard': 'https://drive.google.com/file/d/1x4ITehiU9z02U_99RV-P8KpAiv-SmNn1/view?usp=sharing',
-        'enhanced': 'https://drive.google.com/file/d/your-enhanced-assembly-link/view?usp=sharing'
+        'enhanced': 'https://drive.google.com/file/d/1uyXdXHd-952l39aAg7QuYrVXrxlRWxjg/view?usp=sharing'
     };
     
     const googleDiskLink = googleDiskLinks[selectedAssembly];
