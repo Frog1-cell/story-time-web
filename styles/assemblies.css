@@ -1,20 +1,335 @@
 .assembly-hero {
-    text-align: center;
-    padding: 30px 0;
     margin-bottom: 30px;
 }
 
 .assembly-card {
-    max-width: 800px; 
-    margin: 0 auto;
     background: var(--github-header);
     border: 1px solid var(--github-border);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 24px;
 }
 
-/* Модальное окно выбора сборки */
+.assembly-header {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--github-border);
+}
+
+.assembly-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.assembly-header p {
+    color: var(--github-text-secondary);
+    font-size: 1rem;
+}
+
+.assembly-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.info-item {
+    padding: 12px 16px;
+    background: var(--github-bg);
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item i {
+    color: var(--github-accent);
+    width: 20px;
+    text-align: center;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.feature-highlight {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid var(--github-accent);
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.feature-highlight h5 {
+    color: var(--github-accent);
+    margin-bottom: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature-highlight p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--github-text);
+}
+
+
+.assemblies-accordion {
+    margin-bottom: 12px;
+}
+
+.assembly-item {
+    background: var(--github-header);
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.assembly-item:last-child {
+    margin-bottom: 0;
+}
+
+.assembly-header-btn {
+    width: 100%;
+    background: var(--github-header);
+    border: none;
+    padding: 20px 24px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--github-text);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.assembly-header-btn:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.assembly-header-btn.active {
+    background: rgba(88, 166, 255, 0.1);
+    border-bottom: 1px solid var(--github-border);
+}
+
+.assembly-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.assembly-badge {
+    background: var(--github-accent);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.assembly-chevron {
+    transition: transform 0.3s ease;
+    color: var(--github-text-secondary);
+}
+
+.assembly-header-btn.active .assembly-chevron {
+    transform: rotate(180deg);
+    color: var(--github-accent);
+}
+
+.assembly-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: var(--github-bg);
+}
+
+.assembly-content.active {
+    padding: 24px;
+    max-height: 1000px;
+}
+
+.assembly-description {
+    color: var(--github-text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.assembly-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: var(--github-header);
+    border-radius: 6px;
+    border: 1px solid var(--github-border);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.detail-item i {
+    color: var(--github-accent);
+    width: 16px;
+}
+
+.detail-label {
+    color: var(--github-text-secondary);
+}
+
+.detail-value {
+    color: var(--github-text);
+    font-weight: 500;
+}
+
+.assembly-features {
+    margin-bottom: 20px;
+}
+
+.assembly-features h4 {
+    color: var(--github-accent);
+    margin-bottom: 12px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.feature-item i {
+    color: var(--github-success);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.assembly-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--github-border);
+}
+
+.download-assembly-btn {
+    background: var(--github-success);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.download-assembly-btn:hover {
+    background: #2ea043;
+}
+
+.file-size {
+    color: var(--github-text-secondary);
+    font-size: 0.85rem;
+}
+
+
+.additional-content {
+    display: grid;
+    gap: 16px;
+    margin-top: 0;
+}
+
+.content-card {
+    background: var(--github-header);
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.content-card h3 {
+    color: var(--github-accent);
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.faq-item {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--github-border);
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.faq-item h4 {
+    color: white;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.faq-item p {
+    color: var(--github-text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.content-card ul {
+    padding-left: 18px;
+    color: var(--github-text-secondary);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.content-card li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.content-card strong {
+    color: var(--github-accent);
+}
+
+/* Модальное окно */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -22,9 +337,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 10000;
-    backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -34,19 +348,17 @@
     transform: translate(-50%, -50%);
     background: var(--github-header);
     border: 1px solid var(--github-border);
-    border-radius: 12px;
-    padding: 30px;
-    max-width: 600px;
+    border-radius: 6px;
+    padding: 24px;
+    max-width: 400px;
     width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
 }
 
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--github-border);
 }
@@ -54,6 +366,10 @@
 .modal-header h3 {
     color: white;
     margin: 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .close-modal {
@@ -65,7 +381,7 @@
     padding: 0;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,88 +392,23 @@
     color: white;
 }
 
-.assembly-options {
-    display: grid;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.assembly-option {
-    background: var(--github-bg);
-    border: 1px solid var(--github-border);
-    border-radius: 8px;
-    padding: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.assembly-option:hover {
-    border-color: var(--github-accent);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
-}
-
-.assembly-option.selected {
-    border-color: var(--github-success);
-    background: rgba(63, 185, 80, 0.1);
-}
-
-.option-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-}
-
-.option-title {
-    font-weight: 600;
-    color: white;
-    font-size: 1.1rem;
-}
-
-.option-badge {
-    background: var(--github-accent);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.option-description {
-    color: var(--github-text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-}
-
-.option-details {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    color: var(--github-text-secondary);
-}
-
-.option-size {
-    font-weight: 600;
-    color: var(--github-success);
-}
-
 .modal-actions {
     display: flex;
     gap: 12px;
     justify-content: flex-end;
+    margin-top: 20px;
 }
 
 .btn-secondary {
     background: var(--github-border);
     color: var(--github-text);
     border: none;
-    padding: 12px 24px;
+    padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
-    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
 }
 
 .btn-secondary:hover {
@@ -168,162 +419,14 @@
     background: var(--github-success);
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
-    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
     background: #2ea043;
-    transform: translateY(-1px);
-}
-
-/* Остальные стили остаются без изменений */
-.assembly-header {
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-.assembly-header h2 {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-    color: white;
-}
-
-.assembly-info {
-    text-align: center;
-    margin-bottom: 32px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.info-item {
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    border: 1px solid var(--github-border);
-}
-
-.info-item i {
-    font-size: 1.5rem;
-    color: var(--github-accent);
-    margin-bottom: 8px;
-}
-
-.download-section {
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 24px;
-    background: rgba(63, 185, 80, 0.1);
-    border: 1px solid var(--github-success);
-    border-radius: 8px;
-    margin-bottom: 24px;
-}
-
-.download-btn {
-    display: inline-block;
-    background: var(--github-success);
-    color: white;
-    padding: 16px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    cursor: pointer;
-}
-
-.download-btn:hover {
-    background: #2ea043;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(63, 185, 80, 0.4);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.installation-guide {
-    background: var(--github-header);
-    border: 1px solid var(--github-border);
-    border-radius: 8px;
-    padding: 25px;
-    margin-top: 24px;
-}
-
-.installation-guide h4 {
-    color: var(--github-accent);
-    margin-bottom: 16px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.installation-steps {
-    font-size: 0.95rem;
-}
-
-.installation-steps li {
-    margin-bottom: 12px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.installation-steps li:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.installation-steps i {
-    width: 20px;
-    color: var(--github-success);
-    margin-right: 8px;
-}
-
-.file-size {
-    font-size: 0.9rem;
-    color: var(--github-text-secondary);
-    margin-top: 8px;
-}
-
-.version-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--github-accent), var(--github-purple));
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-left: 8px;
-}
-
-.feature-highlight {
-    background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(163, 113, 247, 0.1));
-    border: 1px solid rgba(88, 166, 255, 0.3);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-.system-requirements {
-    background: rgba(187, 128, 9, 0.1);
-    border: 1px solid var(--github-warning);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-.requirement-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    font-size: 0.9rem;
-}
-
-.requirement-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }

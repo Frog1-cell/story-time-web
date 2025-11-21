@@ -63,48 +63,193 @@
                 </div>
 
                 <section class="content-section">
-                    <div class="assembly-hero">
-                        <div class="assembly-card">
-                            <div class="assembly-header">
-                                <h2><i class="fas fa-crown"></i> Официальные сборки Story Time</h2>
-                                <p>Выберите оптимальный вариант для вашего компьютера и предпочтений</p>
+                    <div class="assembly-card">
+                        <div class="assembly-header">
+                            <h2><i class="fas fa-crown"></i> Официальные сборки Story Time</h2>
+                            <p>Выберите оптимальный вариант для вашего компьютера и предпочтений</p>
+                        </div>
+                        
+                        <div class="assembly-info">
+                            <div class="info-item">
+                                <i class="fas fa-tag"></i>
+                                <p><strong>Версия:</strong> 1.21.1 neoforge</p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-cube"></i>
+                                <p><strong>+ 70 модов</strong></p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-palette"></i>
+                                <p><strong>Ресурспаки:</strong> Встроенные</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-bolt"></i> Преимущества наших сборок</h5>
+                            <p>Все сборки предварительно протестированы, оптимизированы и содержат необходимые ресурспаки сервера для полного погружения в игру, также вы можете кастомизировать сборки под себя без нарушения правил</p>
+                        </div>
+                    </div>
+
+                    <!-- Аккордеон со сборками -->
+                    <div class="assemblies-accordion">
+                        <div class="assembly-item">
+                            <button class="assembly-header-btn" onclick="toggleAssembly('standard')">
+                                <div class="assembly-title">
+                                    <span>Standard Version</span>
+                                    <div class="assembly-badge">Основная</div>
+                                </div>
+                                <i class="fas fa-chevron-down assembly-chevron"></i>
+                            </button>
+                            <div class="assembly-content" id="standard-content">
+                                <div class="assembly-description">
+                                    Стандартная сборка с минимальным набором модов. Подходит для игроков у кого картошка а не ПК. Идеальный выбор для стабильной игры без лишних нагрузок.
+                                </div>
+                                
+                                <div class="assembly-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="detail-label">Версия:</span>
+                                        <span class="detail-value">1.21.1</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-hdd"></i>
+                                        <span class="detail-label">Размер:</span>
+                                        <span class="detail-value">280 МБ</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-memory"></i>
+                                        <span class="detail-label">ОЗУ:</span>
+                                        <span class="detail-value">~4 ГБ минимум</span>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-features">
+                                    <h4><i class="fas fa-star"></i> Основные моды</h4>
+                                    <div class="features-list">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Modern Industrialization</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Mekanism</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Iron's Spells 'n Spellbooks</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Botania</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-actions">
+                                    <button class="download-assembly-btn" onclick="downloadAssembly('standard')">
+                                        <i class="fas fa-download"></i> Скачать сборку
+                                    </button>
+                                    <span class="file-size">280 МБ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="assembly-item">
+                            <button class="assembly-header-btn" onclick="toggleAssembly('enhanced')">
+                                <div class="assembly-title">
+                                    <span>Optimal Version</span>
+                                    <div class="assembly-badge">Расширенная</div>
+                                </div>
+                                <i class="fas fa-chevron-down assembly-chevron"></i>
+                            </button>
+                            <div class="assembly-content" id="enhanced-content">
+                                <div class="assembly-description">
+                                    Расширенная сборка с дополнительными модами для улучшения графики и производительности, а также рекомендуемая для полного погружения и удобства. Включает улучшенные шейдеры и оптимизации.
+                                </div>
+                                
+                                <div class="assembly-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="detail-label">Версия:</span>
+                                        <span class="detail-value">1.21.1</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-hdd"></i>
+                                        <span class="detail-label">Размер:</span>
+                                        <span class="detail-value">382 МБ</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-memory"></i>
+                                        <span class="detail-label">ОЗУ:</span>
+                                        <span class="detail-value">~4 ГБ минимум</span>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-features">
+                                    <h4><i class="fas fa-star"></i> Дополнительные функции</h4>
+                                    <div class="features-list">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Поддержка шейдеров</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Обновленный интерфейс</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Оптимизация</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Клиенские моды</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-actions">
+                                    <button class="download-assembly-btn" onclick="downloadAssembly('enhanced')">
+                                        <i class="fas fa-download"></i> Скачать сборку
+                                    </button>
+                                    <span class="file-size">382 МБ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-content">
+                        <div class="content-card">
+                            <h3><i class="fas fa-question-circle"></i> Часто задаваемые вопросы</h3>
+                            
+                            <div class="faq-item">
+                                <h4>Как установить сборку?</h4>
+                                <p>Скачайте архив с сборкой, распакуйте его в папку с модами вашего лаунчера, затем выберите соответствующий профиль в лаунчере и запустите игру.</p>
                             </div>
                             
-                            <div class="assembly-info">
-                                <div class="info-item">
-                                    <i class="fas fa-tag"></i>
-                                    <p><strong>Версия:</strong> 1.21.1 neoforge</p>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-cube"></i>
-                                    <p><strong>+ 70 модов</strong></p>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-palette"></i>
-                                    <p><strong>Ресурспаки:</strong> Встроенные</p>
-                                </div>
+                            <div class="faq-item">
+                                <h4>Можно ли добавлять свои моды в сборку?</h4>
+                                <p>Да, вы можете добавлять свои моды, но убедитесь, что они совместимы с версией игры и не нарушают правила сервера.</p>
                             </div>
-
-                            <div class="download-section">
-                                <button class="download-btn" onclick="openModal()">
-                                    <i class="fas fa-download"></i> Скачать сборку
-                                </button>
-                                <div class="file-size">Доступно несколько вариантов</div>
+                            
+                            <div class="faq-item">
+                                <h4>Что делать если сборка не запускается?</h4>
+                                <p>Проверьте, что у вас установлена нужная версия Java, достаточно оперативной памяти и все файлы скачаны корректно. Если проблема persists, обратитесь в техподдержку.</p>
                             </div>
-
-                            <div class="feature-highlight">
-                                <h5><i class="fas fa-bolt"></i> Преимущества наших сборок</h5>
-                                <p>Все сборки предварительно протестированы, оптимизированы и содержат необходимые ресурспаки сервера для полного погружения в игру, также вы можете кастомизировать сборки под себя без нарушения правил</p>
+                            
+                            <div class="faq-item">
+                                <h4>Обновляются ли сборки?</h4>
+                                <p>Да, сборки регулярно обновляются при выходе новых версий модов или исправлений. Следите за announcements в нашем Discord.</p>
                             </div>
-
-                            <div class="installation-guide">
-                                <h4><i class="fas fa-info-circle"></i> Универсальная инструкция по установке</h4>
-                                <ol class="installation-steps">
-                                    <li><i class="fas fa-file-archive"></i> Скачайте архив и загрузите в лаунчер</li>
-                                    <li><i class="fas fa-play"></i> Запустите лаунчер и выберите соответствующий профиль</li>
-                                    <li><i class="fas fa-check"></i> Готово! Подключайтесь к серверу</li>
-                                </ol>
-                            </div>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h3><i class="fas fa-life-ring"></i> Техническая поддержка</h3>
+                            <p>Если у вас возникли проблемы с установкой или использованием сборок, обратитесь за помощью:</p>
+                            <ul>
+                                <li>Discord: <strong>#помощь</strong> канал</li>
+                                <li>Проверьте руководство по установке на главной странице</li>
+                                <li>Убедитесь, что ваш ПК соответствует системным требованиям</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -126,46 +271,21 @@
         </div>
     </div>
 
+
     <div class="modal-overlay" id="downloadModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3><i class="fas fa-download"></i> Выберите сборку для скачивания</h3>
+                <h3><i class="fas fa-download"></i> Подтверждение скачивания</h3>
                 <button class="close-modal" onclick="closeModal()">&times;</button>
             </div>
             
-            <div class="assembly-options">
-                <div class="assembly-option" onclick="selectAssembly('standard')">
-                    <div class="option-header">
-                        <div class="option-title">Standard Version</div>
-                        <div class="option-badge">Основная</div>
-                    </div>
-                    <div class="option-description">
-                        Стандартная сборка с минимальным набором модов. Подходит для игроков у кого картошка а не ПК.
-                    </div>
-                    <div class="option-details">
-                        <span>Версия: 1.21.1</span>
-                        <span class="option-size">280 МБ</span>
-                    </div>
-                </div>
-
-                <div class="assembly-option" onclick="selectAssembly('enhanced')">
-                    <div class="option-header">
-                        <div class="option-title">Optimal Version</div>
-                        <div class="option-badge">Расширенная</div>
-                    </div>
-                    <div class="option-description">
-                        Расширенная сборка с дополнительными модами для улучшения графики и производительности, а также рекомендуемая для полного покружения и удобвства.
-                    </div>
-                    <div class="option-details">
-                        <span>Версия: 1.21.1</span>
-                        <span class="option-size">382 МБ</span>
-                    </div>
-                </div>
+            <div id="modalMessage">
+                Вы будете перенаправлены на Google Disk для скачивания выбранной сборки.
             </div>
 
             <div class="modal-actions">
                 <button class="btn-secondary" onclick="closeModal()">Отмена</button>
-                <button class="btn-primary" onclick="downloadSelected()" id="downloadBtn" disabled>
+                <button class="btn-primary" onclick="confirmDownload()" id="confirmDownloadBtn">
                     <i class="fas fa-external-link-alt"></i> Перейти к скачиванию
                 </button>
             </div>
