@@ -31,8 +31,10 @@ function downloadAssembly(assembly) {
 
 function getAssemblyName(assembly) {
     const names = {
-        'standard': 'Standard Version',
-        'enhanced': 'Optimal Version'
+        'standard': 'Standard Version v0.1',
+        'enhanced': 'Optimal Version v0.1',
+        'standard-v2': 'Standard Version v0.2',
+        'enhanced-v2': 'Optimal Version v0.2'
     };
     return names[assembly] || 'Сборка';
 }
@@ -53,7 +55,9 @@ function confirmDownload() {
     
     const googleDiskLinks = {
         'standard': 'https://drive.google.com/file/d/1x4ITehiU9z02U_99RV-P8KpAiv-SmNn1/view?usp=sharing',
-        'enhanced': 'https://drive.google.com/file/d/1uyXdXHd-952l39aAg7QuYrVXrxlRWxjg/view?usp=sharing'
+        'enhanced': 'https://drive.google.com/file/d/1uyXdXHd-952l39aAg7QuYrVXrxlRWxjg/view?usp=sharing',
+        'standard-v2': 'https://drive.google.com/file/d/1OPnZ2Fk3L43ToUadJ-d1Et2SimfxIwl0/view?usp=sharing',
+        'enhanced-v2': 'https://drive.google.com/file/d/1riV5hrmKr4Bx7A4PTGegGRv7y58G1733/view?usp=sharing'
     };
     
     const googleDiskLink = googleDiskLinks[selectedAssembly];

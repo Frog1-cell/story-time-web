@@ -430,3 +430,58 @@
 .btn-primary:hover {
     background: #2ea043;
 }
+/* Стили для новых сборок */
+.new-version {
+    border-left: 3px solid var(--github-success);
+}
+
+.assembly-badge.new {
+    background-color: var(--github-success);
+    color: white;
+}
+
+.assembly-badge.outdated {
+    background-color: var(--github-text-secondary);
+    color: white;
+}
+
+/* Секция устаревших сборок */
+.outdated-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--github-border);
+}
+
+.outdated-section h3 {
+    color: var(--github-text-secondary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.outdated-description {
+    color: var(--github-text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Стили для устаревших сборок */
+.assemblies-accordion.outdated .assembly-item {
+    opacity: 0.8;
+    border-left: 3px solid var(--github-text-secondary);
+}
+
+.assemblies-accordion.outdated .assembly-item:hover {
+    opacity: 1;
+}
+
+.download-assembly-btn.outdated {
+    background-color: var(--github-text-secondary);
+    opacity: 0.7;
+}
+
+.download-assembly-btn.outdated:hover {
+    background-color: var(--github-text-secondary);
+    opacity: 0.9;
+}
