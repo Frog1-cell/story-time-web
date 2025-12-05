@@ -15,7 +15,6 @@ function connectToServer() {
     return false;
 }
 
-// Обновлю функцию highlightActivePage для поддержки новых страниц
 function highlightActivePage() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('.nav-links a');

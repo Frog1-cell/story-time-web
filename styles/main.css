@@ -29,7 +29,6 @@ body {
     min-height: 100vh;
 }
 
-/* Sidebars */
 .sidebar {
     width: var(--sidebar-width);
     background-color: var(--github-header);
@@ -71,7 +70,6 @@ body {
     gap: 8px;
 }
 
-/* Navigation Styles - Единые стили для всех страниц */
 .nav-section {
     margin-bottom: 8px;
 }
@@ -111,7 +109,6 @@ body {
     gap: 8px;
 }
 
-/* Единые стили для всех ссылок - включая якорные */
 .nav-links a[href^="#"],
 .nav-links a[href$=".html"] {
     padding: 8px 12px !important;
@@ -141,7 +138,6 @@ body {
     font-weight: 500;
 }
 
-/* Meta Information */
 .meta-info {
     display: flex;
     flex-direction: column;
@@ -242,7 +238,6 @@ body {
     color: var(--github-accent);
 }
 
-/* Activity */
 .activity-item {
     display: flex;
     align-items: flex-start;
@@ -290,7 +285,6 @@ body {
     color: var(--github-text-secondary);
 }
 
-/* Main Content */
 .main-content {
     flex: 1;
     margin: 0 var(--sidebar-width);
@@ -437,7 +431,6 @@ body {
     border-left-color: var(--github-accent);
 }
 
-/* Footer */
 .content-footer {
     margin-top: 48px;
     padding-top: 24px;
@@ -452,7 +445,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Стили для статистики */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -512,7 +504,6 @@ body {
     color: var(--github-accent);
 }
 
-/* Стили для кланов */
 .clans-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -615,7 +606,6 @@ body {
     background: var(--github-accent);
 }
 
-/* Стили для спонсорства */
 .sponsor-benefits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -653,7 +643,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Table Styles */
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -677,7 +666,6 @@ body {
     background-color: rgba(255, 255, 255, 0.03);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .sidebar-right {
         display: none;
@@ -769,7 +757,6 @@ body {
     }
 }
 
-/* Utility Classes */
 .text-center {
     text-align: center;
 }
@@ -786,7 +773,6 @@ body {
     border-color: var(--github-accent);
 }
 
-/* Loading States */
 body.resizing * {
     transition: none !important;
 }
@@ -804,4 +790,73 @@ body.loaded .sidebar {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rule-item {
+    padding: 16px;
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.rule-item h5 {
+    color: var(--github-accent);
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rule-item ul {
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.rule-item li {
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.feature-highlight {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid var(--github-accent);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.feature-highlight h5 {
+    color: var(--github-accent);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature-highlight p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--github-text);
 }

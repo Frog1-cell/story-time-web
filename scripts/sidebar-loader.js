@@ -1,6 +1,4 @@
-// Функция для загрузки сайдбаров
 function loadSidebars() {
-    // Загружаем левый сайдбар
     fetch('../components/left-sidebar.html')
         .then(response => {
             if (!response.ok) {
@@ -14,7 +12,7 @@ function loadSidebars() {
                 leftSidebar.innerHTML = data;
                 highlightActivePage();
                 attachSidebarEvents();
-                fixMainPageStyles(); // Добавляем фикс стилей для главной страницы
+                fixMainPageStyles(); 
             }
         })
         .catch(error => {
@@ -22,7 +20,6 @@ function loadSidebars() {
             createFallbackSidebar();
         });
 
-    // Загружаем правый сайдбар
     fetch('../components/right-sidebar.html')
         .then(response => {
             if (!response.ok) {
@@ -42,7 +39,6 @@ function loadSidebars() {
         });
 }
 
-// Функция для создания fallback правого сайдбара
 function createFallbackRightSidebar() {
     const rightSidebar = document.querySelector('.sidebar-right .sidebar-content');
     if (rightSidebar) {
@@ -60,12 +56,10 @@ function createFallbackRightSidebar() {
     }
 }
 
-// Функция для фикса стилей на главной странице
 function fixMainPageStyles() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     
     if (currentPath === 'index.html' || currentPath === '' || currentPath.includes('index.html')) {
-        // Убираем отступы у ссылок на якоря на главной странице
         const style = document.createElement('style');
         style.textContent = `
             .nav-links a[href^="#"] {
@@ -85,7 +79,6 @@ function fixMainPageStyles() {
     }
 }
 
-// Остальные функции остаются без изменений...
 function createFallbackSidebar() {
     const leftSidebar = document.querySelector('.sidebar-left .sidebar-content');
     if (leftSidebar) {
@@ -106,19 +99,18 @@ function createFallbackSidebar() {
             </div>
 
             <div class="nav-section">
-                <div class="nav-title"><i class="fas fa-chart-line fa-fw"></i> Игровая статистика</div>
+                <div class="nav-title"><i class="fas fa-gavel fa-fw"></i> Правила</div>
                 <ul class="nav-links">
-                    <li><a href="clans.html"><i class="fas fa-users fa-fw"></i> Кланы</a></li>
+                    <li><a href="index.html#rules"><i class="fas fa-list fa-fw"></i> Основные правила</a></li>
+                    <li><a href="minecraft-rules.html"><i class="fas fa-cube fa-fw"></i> Правила Minecraft</a></li>
+                    <li><a href="index.html#discord-rules"><i class="fab fa-discord fa-fw"></i> Правила Discord</a></li>
                 </ul>
             </div>
 
             <div class="nav-section">
-                <div class="nav-title"><i class="fas fa-play-circle fa-fw"></i> Начало игры</div>
+                <div class="nav-title"><i class="fas fa-chart-line fa-fw"></i> Игровая статистика</div>
                 <ul class="nav-links">
-                    <li><a href="index.html#discord-registration"><i class="fab fa-discord fa-fw"></i> Регистрация в Discord</a></li>
-                    <li><a href="index.html#getting-started"><i class="fas fa-plug fa-fw"></i> Подключение к серверу</a></li>
-                    <li><a href="index.html#rules"><i class="fas fa-gavel fa-fw"></i> Правила сервера</a></li>
-                    <li><a href="index.html#discord-rules"><i class="fas fa-scroll fa-fw"></i> Правила Discord</a></li>
+                    <li><a href="clans.html"><i class="fas fa-users fa-fw"></i> Кланы</a></li>
                 </ul>
             </div>
 
@@ -135,7 +127,6 @@ function createFallbackSidebar() {
     }
 }
 
-// Функция для подсветки активной страницы
 function highlightActivePage() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('.nav-links a');
@@ -154,9 +145,7 @@ function highlightActivePage() {
     });
 }
 
-// Функция для привязки событий сайдбара
 function attachSidebarEvents() {
-    // Обработка кликов по навигационным ссылкам
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -170,7 +159,6 @@ function attachSidebarEvents() {
                         behavior: 'smooth'
                     });
                     
-                    // Обновляем активный раздел
                     document.querySelectorAll('.nav-links li').forEach(li => {
                         li.classList.remove('active');
                     });
@@ -180,7 +168,6 @@ function attachSidebarEvents() {
         });
     });
 
-    // Обработка кликов по ссылкам на страницы
     document.querySelectorAll('.nav-links a[href$=".html"]').forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -191,7 +178,6 @@ function attachSidebarEvents() {
     });
 }
 
-// Функция для копирования IP сервера
 function connectToServer() {
     const ip = 'story-time.playit.plus';
     navigator.clipboard.writeText(ip).then(() => {
@@ -209,7 +195,6 @@ function connectToServer() {
     return false;
 }
 
-// Функция для обновления активного раздела (для главной страницы)
 function updateActiveSection() {
     const sections = document.querySelectorAll('.content-section');
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -234,7 +219,6 @@ function updateActiveSection() {
     });
 }
 
-// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
     loadSidebars();
     document.body.classList.add('loaded');
@@ -245,7 +229,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Обработка изменения размера окна
 let resizeTimer;
 window.addEventListener('resize', () => {
     document.body.classList.add('resizing');
