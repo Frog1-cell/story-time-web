@@ -1,4 +1,25 @@
+// Archive page functionality - uses same functions as assemblies.js but loads from archive config
 let selectedAssembly = null;
+let archiveConfig = null;
+
+// Load config on page load
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('config.json')
+        .then(response => response.json())
+        .then(config => {
+            archiveConfig = config.archive;
+        })
+        .catch(error => {
+            console.error('Error loading config:', error);
+            // Fallback to hardcoded values
+            archiveConfig = {
+                'standard-v2': { name: 'Standard Version v0.2' },
+                'enhanced-v2': { name: 'Optimal Version v0.2' },
+                'standard': { name: 'Standard Version v0.1' },
+                'enhanced': { name: 'Optimal Version v0.1' }
+            };
+        });
+});
 
 function toggleAssembly(assemblyId) {
     const content = document.getElementById(`${assemblyId}-content`);
@@ -30,6 +51,10 @@ function downloadAssembly(assembly) {
 }
 
 function getAssemblyName(assembly) {
+    if (archiveConfig && archiveConfig[assembly]) {
+        return archiveConfig[assembly].name;
+    }
+    // Fallback
     const names = {
         'standard': 'Standard Version v0.1',
         'enhanced': 'Optimal Version v0.1',
@@ -53,14 +78,23 @@ function closeModal() {
 function confirmDownload() {
     if (!selectedAssembly) return;
     
-    const googleDiskLinks = {
-        'standard': 'https://drive.google.com/file/d/1x4ITehiU9z02U_99RV-P8KpAiv-SmNn1/view?usp=sharing',
-        'enhanced': 'https://drive.google.com/file/d/1uyXdXHd-952l39aAg7QuYrVXrxlRWxjg/view?usp=sharing',
-        'standard-v2': 'https://drive.google.com/file/d/1OPnZ2Fk3L43ToUadJ-d1Et2SimfxIwl0/view?usp=sharing',
-        'enhanced-v2': 'https://drive.google.com/file/d/1riV5hrmKr4Bx7A4PTGegGRv7y58G1733/view?usp=sharing'
-    };
+    let googleDiskLink = null;
     
-    const googleDiskLink = googleDiskLinks[selectedAssembly];
+    // Try to get from archive config first
+    if (archiveConfig && archiveConfig[selectedAssembly]) {
+        googleDiskLink = archiveConfig[selectedAssembly].download;
+    }
+    
+    // Fallback to hardcoded links
+    if (!googleDiskLink) {
+        const googleDiskLinks = {
+            'standard': 'https://drive.google.com/file/d/1x4ITehiU9z02U_99RV-P8KpAiv-SmNn1/view?usp=sharing',
+            'enhanced': 'https://drive.google.com/file/d/1uyXdXHd-952l39aAg7QuYrVXrxlRWxjg/view?usp=sharing',
+            'standard-v2': 'https://drive.google.com/file/d/1OPnZ2Fk3L43ToUadJ-d1Et2SimfxIwl0/view?usp=sharing',
+            'enhanced-v2': 'https://drive.google.com/file/d/1riV5hrmKr4Bx7A4PTGegGRv7y58G1733/view?usp=sharing'
+        };
+        googleDiskLink = googleDiskLinks[selectedAssembly];
+    }
     
     if (googleDiskLink) {
         window.open(googleDiskLink, '_blank');
@@ -103,7 +137,7 @@ function showRedirectNotification() {
     }, 3000);
 }
 
-
+// Close modal on overlay click
 document.addEventListener('click', function(event) {
     const modal = document.getElementById('downloadModal');
     if (event.target === modal) {
@@ -111,9 +145,10 @@ document.addEventListener('click', function(event) {
     }
 });
 
-
+// Close modal on Escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeModal();
     }
 });
+

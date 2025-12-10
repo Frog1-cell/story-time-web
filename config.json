@@ -1,0 +1,61 @@
+{
+  "site": {
+    "name": "Story Time",
+    "title": "Story Time | Документация",
+    "description": "Полное руководство по майкрафт проекту Story Time",
+    "creator": "Frog_o21",
+    "year": "2024"
+  },
+  "server": {
+    "ip": "story-time.playit.plus",
+    "version": "1.21.1 neoforge",
+    "mods": 70
+  },
+  "discord": {
+    "link": "https://discord.gg/2Sc83ZvjNF",
+    "channel": {
+      "sponsors": "#спонсортво-сервера",
+      "support": "#помощь"
+    }
+  },
+  "assemblies": {
+    "standard-v3": {
+      "name": "Standard Version v0.3",
+      "version": "1.21.1 v0.3",
+      "size": "320 МБ",
+      "ram": "~4 ГБ минимум",
+      "download": "https://drive.google.com/file/d/1D4l4F6XPhBGaLKPMskKhwnvArG82PoPu/view?usp=sharing"
+    }
+  },
+  "archive": {
+    "standard-v2": {
+      "name": "Standard Version v0.2",
+      "version": "1.21.1 v0.2",
+      "size": "310 МБ",
+      "ram": "~4 ГБ минимум",
+      "download": "https://drive.google.com/file/d/1OPnZ2Fk3L43ToUadJ-d1Et2SimfxIwl0/view?usp=sharing"
+    },
+    "enhanced-v2": {
+      "name": "Optimal Version v0.2",
+      "version": "1.21.1 v0.2",
+      "size": "397 МБ",
+      "ram": "~4 ГБ минимум",
+      "download": "https://drive.google.com/file/d/1riV5hrmKr4Bx7A4PTGegGRv7y58G1733/view?usp=sharing"
+    },
+    "standard": {
+      "name": "Standard Version v0.1",
+      "version": "1.21.1 v0.1",
+      "size": "280 МБ",
+      "ram": "~4 ГБ минимум",
+      "download": "https://drive.google.com/file/d/1x4ITehiU9z02U_99RV-P8KpAiv-SmNn1/view?usp=sharing"
+    },
+    "enhanced": {
+      "name": "Optimal Version v0.1",
+      "version": "1.21.1 v0.1",
+      "size": "382 МБ",
+      "ram": "~4 ГБ минимум",
+      "download": "https://drive.google.com/file/d/1uyXdXHd-952l39aAg7QuYrVXrxlRWxjg/view?usp=sharing"
+    }
+  }
+}
+
