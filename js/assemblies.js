@@ -1,8 +1,6 @@
-// Assemblies page functionality
 let selectedAssembly = null;
 let assembliesConfig = null;
 
-// Load config on page load
 document.addEventListener('DOMContentLoaded', function() {
     fetch('config.json')
         .then(response => response.json())
@@ -11,12 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error loading config:', error);
-            // Fallback to hardcoded values
             assembliesConfig = {
-                'standard': { name: 'Standard Version v0.1' },
-                'enhanced': { name: 'Optimal Version v0.1' },
-                'standard-v2': { name: 'Standard Version v0.2' },
-                'enhanced-v2': { name: 'Optimal Version v0.2' }
+                'standard-v4': { name: 'Standard Version v0.4' },
+                'enhanced-v4': { name: 'Optimal Version v0.4' }
             };
         });
 });
@@ -25,7 +20,6 @@ function toggleAssembly(assemblyId) {
     const content = document.getElementById(`${assemblyId}-content`);
     const header = event.currentTarget;
     
-
     document.querySelectorAll('.assembly-content').forEach(item => {
         if (item.id !== `${assemblyId}-content`) {
             item.classList.remove('active');
@@ -38,7 +32,6 @@ function toggleAssembly(assemblyId) {
         }
     });
     
-
     content.classList.toggle('active');
     header.classList.toggle('active');
 }
@@ -54,13 +47,9 @@ function getAssemblyName(assembly) {
     if (assembliesConfig && assembliesConfig[assembly]) {
         return assembliesConfig[assembly].name;
     }
-    // Fallback
     const names = {
-        'standard-v3': 'Standard Version v0.3',
-        'standard': 'Standard Version v0.1',
-        'enhanced': 'Optimal Version v0.1',
-        'standard-v2': 'Standard Version v0.2',
-        'enhanced-v2': 'Optimal Version v0.2'
+        'standard-v4': 'Standard Version v0.4',
+        'enhanced-v4': 'Optimal Version v0.4'
     };
     return names[assembly] || 'Сборка';
 }
@@ -81,19 +70,14 @@ function confirmDownload() {
     
     let googleDiskLink = null;
     
-    // Try to get from config first
     if (assembliesConfig && assembliesConfig[selectedAssembly]) {
         googleDiskLink = assembliesConfig[selectedAssembly].download;
     }
     
-    // Fallback to hardcoded links
     if (!googleDiskLink) {
         const googleDiskLinks = {
-            'standard-v3': 'https://drive.google.com/file/d/10_A6d2nWk7NxaACHGxyClNcR-G2GoQsh/view?usp=sharing',
-            'standard': 'https://drive.google.com/file/d/1x4ITehiU9z02U_99RV-P8KpAiv-SmNn1/view?usp=sharing',
-            'enhanced': 'https://drive.google.com/file/d/1uyXdXHd-952l39aAg7QuYrVXrxlRWxjg/view?usp=sharing',
-            'standard-v2': 'https://drive.google.com/file/d/1OPnZ2Fk3L43ToUadJ-d1Et2SimfxIwl0/view?usp=sharing',
-            'enhanced-v2': 'https://drive.google.com/file/d/1riV5hrmKr4Bx7A4PTGegGRv7y58G1733/view?usp=sharing'
+            'standard-v4': 'https://drive.google.com/file/d/12qfRshLaNYQ52WRNK0eds5hS61W7-8Db/view?usp=sharing',
+            'enhanced-v4': 'https://drive.google.com/file/d/1jO59GWhXyp7sKCPUT0I6xxdyJ0UnxmdV/view?usp=sharing' 
         };
         googleDiskLink = googleDiskLinks[selectedAssembly];
     }
@@ -139,14 +123,12 @@ function showRedirectNotification() {
     }, 3000);
 }
 
-
 document.addEventListener('click', function(event) {
     const modal = document.getElementById('downloadModal');
     if (event.target === modal) {
         closeModal();
     }
 });
-
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {

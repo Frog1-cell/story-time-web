@@ -19,15 +19,29 @@
     }
   },
   "assemblies": {
+    "standard-v4": {
+      "name": "Standard Version v0.4",
+      "version": "1.21.1 v0.4",
+      "size": "340 МБ",
+      "ram": "~4 ГБ минимум",
+      "download": "https://drive.google.com/file/d/12qfRshLaNYQ52WRNK0eds5hS61W7-8Db/view?usp=sharing"
+    },
+    "enhanced-v4": {
+      "name": "Optimal Version v0.4",
+      "version": "1.21.1 v0.4",
+      "size": "410 МБ",
+      "ram": "~4 ГБ минимум",
+      "download": "https://drive.google.com/file/d/1jO59GWhXyp7sKCPUT0I6xxdyJ0UnxmdV/view?usp=sharing"
+    }
+  },
+  "archive": {
     "standard-v3": {
       "name": "Standard Version v0.3",
       "version": "1.21.1 v0.3",
       "size": "320 МБ",
       "ram": "~4 ГБ минимум",
-      "download": "https://drive.google.com/file/d/1D4l4F6XPhBGaLKPMskKhwnvArG82PoPu/view?usp=sharing"
-    }
-  },
-  "archive": {
+      "download": "https://drive.google.com/file/d/10_A6d2nWk7NxaACHGxyClNcR-G2GoQsh/view?usp=sharing"
+    },
     "standard-v2": {
       "name": "Standard Version v0.2",
       "version": "1.21.1 v0.2",
@@ -58,4 +72,3 @@
     }
   }
 }
-

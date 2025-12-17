@@ -41,271 +41,300 @@
                         </div>
                     </div>
 
-                    <div class="outdated-section">
-                        <h3><i class="fas fa-history"></i> Устаревшие сборки v0.2</h3>
-                        <p class="outdated-description">Сборки версии 0.2, которые были заменены на более новые версии</p>
-                        
-                        <div class="assemblies-accordion outdated">
-                            <div class="assembly-item outdated">
-                                <button class="assembly-header-btn" onclick="toggleAssembly('standard-v2')">
-                                    <div class="assembly-title">
-                                        <span>Standard Version v0.2</span>
-                                        <div class="assembly-badge outdated">Устаревшая</div>
+                    <h3><i class="fas fa-history"></i> Устаревшие сборки</h3>
+                    <p class="outdated-description">Все предыдущие версии сборок, отсортированные от новых к старым</p>
+                    
+                    <div class="assemblies-accordion outdated">
+                        <div class="assembly-item outdated">
+                            <button class="assembly-header-btn" onclick="toggleAssembly('standard-v3')">
+                                <div class="assembly-title">
+                                    <span>Standard Version v0.3</span>
+                                    <div class="assembly-badge outdated">Устаревшая</div>
+                                </div>
+                                <i class="fas fa-chevron-down assembly-chevron"></i>
+                            </button>
+                            <div class="assembly-content" id="standard-v3-content">
+                                <div class="assembly-description">
+                                    Стандартная сборка версии 0.3. Включает обновленный набор модов и улучшенную производительность.
+                                </div>
+                                
+                                <div class="assembly-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="detail-label">Версия:</span>
+                                        <span class="detail-value">1.21.1 v0.3</span>
                                     </div>
-                                    <i class="fas fa-chevron-down assembly-chevron"></i>
-                                </button>
-                                <div class="assembly-content" id="standard-v2-content">
-                                    <div class="assembly-description">
-                                        Улучшенная стандартная сборка с оптимизированным набором модов. Повышена стабильность и производительность. Подходит для игроков со средними ПК.
+                                    <div class="detail-item">
+                                        <i class="fas fa-hdd"></i>
+                                        <span class="detail-label">Размер:</span>
+                                        <span class="detail-value">320 МБ</span>
                                     </div>
-                                    
-                                    <div class="assembly-details">
-                                        <div class="detail-item">
-                                            <i class="fas fa-tag"></i>
-                                            <span class="detail-label">Версия:</span>
-                                            <span class="detail-value">1.21.1 v0.2</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-hdd"></i>
-                                            <span class="detail-label">Размер:</span>
-                                            <span class="detail-value">310 МБ</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-memory"></i>
-                                            <span class="detail-label">ОЗУ:</span>
-                                            <span class="detail-value">~4 ГБ минимум</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="assembly-features">
-                                        <h4><i class="fas fa-star"></i> Моды</h4>
-                                        <div class="features-list">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Modern Industrialization</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Mekanism</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Iron's Spells 'n Spellbooks</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Botania</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Дополнительные оптимизации</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="assembly-actions">
-                                        <button class="download-assembly-btn outdated" onclick="downloadAssembly('standard-v2')">
-                                            <i class="fas fa-download"></i> Скачать сборку
-                                        </button>
-                                        <span class="file-size">310 МБ</span>
+                                    <div class="detail-item">
+                                        <i class="fas fa-memory"></i>
+                                        <span class="detail-label">ОЗУ:</span>
+                                        <span class="detail-value">~4 ГБ минимум</span>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="assembly-item outdated">
-                                <button class="assembly-header-btn" onclick="toggleAssembly('enhanced-v2')">
-                                    <div class="assembly-title">
-                                        <span>Optimal Version v0.2</span>
-                                        <div class="assembly-badge outdated">Устаревшая</div>
-                                    </div>
-                                    <i class="fas fa-chevron-down assembly-chevron"></i>
-                                </button>
-                                <div class="assembly-content" id="enhanced-v2-content">
-                                    <div class="assembly-description">
-                                        Улучшенная расширенная сборка с дополнительными оптимизациями и улучшенной графикой. Включает улучшенные шейдеры, оптимизации и новые клиенские моды для лучшего игрового опыта.
-                                    </div>
-                                    
-                                    <div class="assembly-details">
-                                        <div class="detail-item">
-                                            <i class="fas fa-tag"></i>
-                                            <span class="detail-label">Версия:</span>
-                                            <span class="detail-value">1.21.1 v0.2</span>
+                                <div class="assembly-features">
+                                    <h4><i class="fas fa-star"></i> Моды</h4>
+                                    <div class="features-list">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Modern Industrialization</span>
                                         </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-hdd"></i>
-                                            <span class="detail-label">Размер:</span>
-                                            <span class="detail-value">397 МБ</span>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Mekanism</span>
                                         </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-memory"></i>
-                                            <span class="detail-label">ОЗУ:</span>
-                                            <span class="detail-value">~4 ГБ минимум</span>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Iron's Spells 'n Spellbooks</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Botania</span>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="assembly-features">
-                                        <h4><i class="fas fa-star"></i> Дополнительные улучшения</h4>
-                                        <div class="features-list">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Улучшенные шейдеры</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Обновленный интерфейс v2</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Продвинутая оптимизация</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Новые клиенские моды</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Улучшенная стабильность</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="assembly-actions">
-                                        <button class="download-assembly-btn outdated" onclick="downloadAssembly('enhanced-v2')">
-                                            <i class="fas fa-download"></i> Скачать сборку
-                                        </button>
-                                        <span class="file-size">397 МБ</span>
-                                    </div>
+                                <div class="assembly-actions">
+                                    <button class="download-assembly-btn outdated" onclick="downloadAssembly('standard-v3')">
+                                        <i class="fas fa-download"></i> Скачать сборку
+                                    </button>
+                                    <span class="file-size">320 МБ</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="outdated-section">
-                        <h3><i class="fas fa-history"></i> Устаревшие сборки v0.1</h3>
-                        <p class="outdated-description">Первые версии сборок, которые больше не поддерживаются</p>
-                        
-                        <div class="assemblies-accordion outdated">
-                            <div class="assembly-item outdated">
-                                <button class="assembly-header-btn" onclick="toggleAssembly('standard')">
-                                    <div class="assembly-title">
-                                        <span>Standard Version v0.1</span>
-                                        <div class="assembly-badge outdated">Устаревшая</div>
+                        <div class="assembly-item outdated">
+                            <button class="assembly-header-btn" onclick="toggleAssembly('standard-v2')">
+                                <div class="assembly-title">
+                                    <span>Standard Version v0.2</span>
+                                    <div class="assembly-badge outdated">Устаревшая</div>
+                                </div>
+                                <i class="fas fa-chevron-down assembly-chevron"></i>
+                            </button>
+                            <div class="assembly-content" id="standard-v2-content">
+                                <div class="assembly-description">
+                                    Стандартная сборка версии 0.2 с оптимизированным набором модов. Повышена стабильность и производительность.
+                                </div>
+                                
+                                <div class="assembly-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="detail-label">Версия:</span>
+                                        <span class="detail-value">1.21.1 v0.2</span>
                                     </div>
-                                    <i class="fas fa-chevron-down assembly-chevron"></i>
-                                </button>
-                                <div class="assembly-content" id="standard-content">
-                                    <div class="assembly-description">
-                                        Стандартная сборка с минимальным набором модов. Подходит для игроков у кого картошка а не ПК. Идеальный выбор для стабильной игры без лишних нагрузок.
+                                    <div class="detail-item">
+                                        <i class="fas fa-hdd"></i>
+                                        <span class="detail-label">Размер:</span>
+                                        <span class="detail-value">310 МБ</span>
                                     </div>
-                                    
-                                    <div class="assembly-details">
-                                        <div class="detail-item">
-                                            <i class="fas fa-tag"></i>
-                                            <span class="detail-label">Версия:</span>
-                                            <span class="detail-value">1.21.1 v0.1</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-hdd"></i>
-                                            <span class="detail-label">Размер:</span>
-                                            <span class="detail-value">280 МБ</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-memory"></i>
-                                            <span class="detail-label">ОЗУ:</span>
-                                            <span class="detail-value">~4 ГБ минимум</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="assembly-features">
-                                        <h4><i class="fas fa-star"></i> Основные моды</h4>
-                                        <div class="features-list">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Modern Industrialization</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Mekanism</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Iron's Spells 'n Spellbooks</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Botania</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="assembly-actions">
-                                        <button class="download-assembly-btn outdated" onclick="downloadAssembly('standard')">
-                                            <i class="fas fa-download"></i> Скачать сборку
-                                        </button>
-                                        <span class="file-size">280 МБ</span>
+                                    <div class="detail-item">
+                                        <i class="fas fa-memory"></i>
+                                        <span class="detail-label">ОЗУ:</span>
+                                        <span class="detail-value">~4 ГБ минимум</span>
                                     </div>
                                 </div>
+
+                                <div class="assembly-features">
+                                    <h4><i class="fas fa-star"></i> Моды</h4>
+                                    <div class="features-list">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Modern Industrialization</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Mekanism</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Iron's Spells 'n Spellbooks</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-actions">
+                                    <button class="download-assembly-btn outdated" onclick="downloadAssembly('standard-v2')">
+                                        <i class="fas fa-download"></i> Скачать сборку
+                                    </button>
+                                    <span class="file-size">310 МБ</span>
+                                </div>
                             </div>
+                        </div>
 
-                            <div class="assembly-item outdated">
-                                <button class="assembly-header-btn" onclick="toggleAssembly('enhanced')">
-                                    <div class="assembly-title">
-                                        <span>Optimal Version v0.1</span>
-                                        <div class="assembly-badge outdated">Устаревшая</div>
+                        <div class="assembly-item outdated">
+                            <button class="assembly-header-btn" onclick="toggleAssembly('enhanced-v2')">
+                                <div class="assembly-title">
+                                    <span>Optimal Version v0.2</span>
+                                    <div class="assembly-badge outdated">Устаревшая</div>
+                                </div>
+                                <i class="fas fa-chevron-down assembly-chevron"></i>
+                            </button>
+                            <div class="assembly-content" id="enhanced-v2-content">
+                                <div class="assembly-description">
+                                    Расширенная сборка версии 0.2 с дополнительными оптимизациями и улучшенной графикой.
+                                </div>
+                                
+                                <div class="assembly-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="detail-label">Версия:</span>
+                                        <span class="detail-value">1.21.1 v0.2</span>
                                     </div>
-                                    <i class="fas fa-chevron-down assembly-chevron"></i>
-                                </button>
-                                <div class="assembly-content" id="enhanced-content">
-                                    <div class="assembly-description">
-                                        Расширенная сборка с дополнительными модами для улучшения графики и производительности, а также рекомендуемая для полного погружения и удобства. Включает улучшенные шейдеры и оптимизации.
+                                    <div class="detail-item">
+                                        <i class="fas fa-hdd"></i>
+                                        <span class="detail-label">Размер:</span>
+                                        <span class="detail-value">397 МБ</span>
                                     </div>
-                                    
-                                    <div class="assembly-details">
-                                        <div class="detail-item">
-                                            <i class="fas fa-tag"></i>
-                                            <span class="detail-label">Версия:</span>
-                                            <span class="detail-value">1.21.1 v0.1</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-hdd"></i>
-                                            <span class="detail-label">Размер:</span>
-                                            <span class="detail-value">382 МБ</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <i class="fas fa-memory"></i>
-                                            <span class="detail-label">ОЗУ:</span>
-                                            <span class="detail-value">~4 ГБ минимум</span>
-                                        </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-memory"></i>
+                                        <span class="detail-label">ОЗУ:</span>
+                                        <span class="detail-value">~4 ГБ минимум</span>
                                     </div>
+                                </div>
 
-                                    <div class="assembly-features">
-                                        <h4><i class="fas fa-star"></i> Дополнительные функции</h4>
-                                        <div class="features-list">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Поддержка шейдеров</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Обновленный интерфейс</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Оптимизация</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check"></i>
-                                                <span>Клиенские моды</span>
-                                            </div>
+                                <div class="assembly-features">
+                                    <h4><i class="fas fa-star"></i> Дополнительные улучшения</h4>
+                                    <div class="features-list">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Улучшенные шейдеры</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Обновленный интерфейс v2</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Продвинутая оптимизация</span>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="assembly-actions">
-                                        <button class="download-assembly-btn outdated" onclick="downloadAssembly('enhanced')">
-                                            <i class="fas fa-download"></i> Скачать сборку
-                                        </button>
-                                        <span class="file-size">382 МБ</span>
+                                <div class="assembly-actions">
+                                    <button class="download-assembly-btn outdated" onclick="downloadAssembly('enhanced-v2')">
+                                        <i class="fas fa-download"></i> Скачать сборку
+                                    </button>
+                                    <span class="file-size">397 МБ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="assembly-item outdated">
+                            <button class="assembly-header-btn" onclick="toggleAssembly('standard')">
+                                <div class="assembly-title">
+                                    <span>Standard Version v0.1</span>
+                                    <div class="assembly-badge outdated">Устаревшая</div>
+                                </div>
+                                <i class="fas fa-chevron-down assembly-chevron"></i>
+                            </button>
+                            <div class="assembly-content" id="standard-content">
+                                <div class="assembly-description">
+                                    Первая стандартная сборка версии 0.1. Минимальный набор модов для стабильной игры.
+                                </div>
+                                
+                                <div class="assembly-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="detail-label">Версия:</span>
+                                        <span class="detail-value">1.21.1 v0.1</span>
                                     </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-hdd"></i>
+                                        <span class="detail-label">Размер:</span>
+                                        <span class="detail-value">280 МБ</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-memory"></i>
+                                        <span class="detail-label">ОЗУ:</span>
+                                        <span class="detail-value">~4 ГБ минимум</span>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-features">
+                                    <h4><i class="fas fa-star"></i> Основные моды</h4>
+                                    <div class="features-list">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Modern Industrialization</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Mekanism</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Iron's Spells 'n Spellbooks</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-actions">
+                                    <button class="download-assembly-btn outdated" onclick="downloadAssembly('standard')">
+                                        <i class="fas fa-download"></i> Скачать сборку
+                                    </button>
+                                    <span class="file-size">280 МБ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="assembly-item outdated">
+                            <button class="assembly-header-btn" onclick="toggleAssembly('enhanced')">
+                                <div class="assembly-title">
+                                    <span>Optimal Version v0.1</span>
+                                    <div class="assembly-badge outdated">Устаревшая</div>
+                                </div>
+                                <i class="fas fa-chevron-down assembly-chevron"></i>
+                            </button>
+                            <div class="assembly-content" id="enhanced-content">
+                                <div class="assembly-description">
+                                    Первая расширенная сборка версии 0.1 с дополнительными модами для улучшения графики.
+                                </div>
+                                
+                                <div class="assembly-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="detail-label">Версия:</span>
+                                        <span class="detail-value">1.21.1 v0.1</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-hdd"></i>
+                                        <span class="detail-label">Размер:</span>
+                                        <span class="detail-value">382 МБ</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-memory"></i>
+                                        <span class="detail-label">ОЗУ:</span>
+                                        <span class="detail-value">~4 ГБ минимум</span>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-features">
+                                    <h4><i class="fas fa-star"></i> Дополнительные функции</h4>
+                                    <div class="features-list">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Поддержка шейдеров</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Обновленный интерфейс</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Клиенские моды</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="assembly-actions">
+                                    <button class="download-assembly-btn outdated" onclick="downloadAssembly('enhanced')">
+                                        <i class="fas fa-download"></i> Скачать сборку
+                                    </button>
+                                    <span class="file-size">382 МБ</span>
                                 </div>
                             </div>
                         </div>
@@ -355,4 +384,3 @@
     <script src="../js/archive.js"></script>
 </body>
 </html>
-

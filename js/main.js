@@ -1,18 +1,12 @@
-// Main JavaScript file for Story Time website
-// Handles sidebar loading, navigation, and common functionality
-
-// Site configuration
 const SITE_CONFIG = {
     serverIP: 'story-time.playit.plus',
     discordLink: 'https://discord.gg/2Sc83ZvjNF',
     componentsPath: 'components/'
 };
 
-// Load sidebars from components
 function loadSidebars() {
     const basePath = getBasePath();
     
-    // Load left sidebar
     fetch(`${basePath}${SITE_CONFIG.componentsPath}left-sidebar.html`)
         .then(response => {
             if (!response.ok) {
@@ -23,14 +17,11 @@ function loadSidebars() {
         .then(data => {
             const leftSidebar = document.querySelector('.sidebar-left .sidebar-content');
             if (leftSidebar) {
-                // Replace paths in component based on current location
                 let processedData = data;
                 if (basePath === '../') {
-                    // We're in pages/, so add ../ to paths (except index.html which needs ../)
                     processedData = processedData.replace(/href="index\.html/g, 'href="../index.html');
                     processedData = processedData.replace(/href="(assemblies|archive|sponsors|minecraft-rules|discord|clans)\.html/g, 'href="$1.html');
                 } else {
-                    // We're in root, add pages/ prefix to page links
                     processedData = processedData.replace(/href="(assemblies|archive|sponsors|minecraft-rules|discord|clans)\.html/g, 'href="pages/$1.html');
                 }
                 leftSidebar.innerHTML = processedData;
@@ -44,7 +35,6 @@ function loadSidebars() {
             createFallbackSidebar();
         });
 
-    // Load right sidebar
     fetch(`${basePath}${SITE_CONFIG.componentsPath}right-sidebar.html`)
         .then(response => {
             if (!response.ok) {
@@ -64,17 +54,14 @@ function loadSidebars() {
         });
 }
 
-// Get base path for GitHub Pages compatibility
 function getBasePath() {
     const path = window.location.pathname;
-    // If we're in pages subdirectory, return '../', otherwise ''
     if (path.includes('/pages/')) {
         return '../';
     }
     return '';
 }
 
-// Fallback sidebar if component fails to load
 function createFallbackSidebar() {
     const leftSidebar = document.querySelector('.sidebar-left .sidebar-content');
     if (leftSidebar) {
@@ -142,7 +129,6 @@ function createFallbackRightSidebar() {
     }
 }
 
-// Fix styles for main page
 function fixMainPageStyles() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     
@@ -166,7 +152,6 @@ function fixMainPageStyles() {
     }
 }
 
-// Highlight active page in navigation
 function highlightActivePage() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('.nav-links a');
@@ -185,7 +170,6 @@ function highlightActivePage() {
     });
 }
 
-// Attach sidebar event handlers
 function attachSidebarEvents() {
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
@@ -219,7 +203,6 @@ function attachSidebarEvents() {
     });
 }
 
-// Copy server IP to clipboard
 function connectToServer() {
     navigator.clipboard.writeText(SITE_CONFIG.serverIP).then(() => {
         const notification = document.createElement('div');
@@ -236,7 +219,6 @@ function connectToServer() {
     return false;
 }
 
-// Update active section on scroll (for index page)
 function updateActiveSection() {
     const sections = document.querySelectorAll('.content-section');
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -261,7 +243,6 @@ function updateActiveSection() {
     });
 }
 
-// Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
     loadSidebars();
     document.body.classList.add('loaded');
@@ -272,10 +253,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Handle browser back/forward
 window.addEventListener('popstate', highlightActivePage);
 
-// Handle window resize
 let resizeTimer;
 window.addEventListener('resize', () => {
     document.body.classList.add('resizing');
