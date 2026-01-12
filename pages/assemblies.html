@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сборки | Story Time</title>
+    <title>Установка | Story Time SMP</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/assemblies.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,219 +18,285 @@
 
         <div class="main-content">
             <div class="content-wrapper">
+                <!-- Главный заголовок -->
                 <div class="header">
-                    <h1>Документация по сборкам</h1>
-                    <p>Полное руководство по сборкам по проекту Story Time</p>
-                    
-                    <div class="breadcrumbs">
-                        <a href="#">Story Time</a>
-                        <span class="breadcrumb-separator">/</span>
-                        <a href="#">Разделы</a>
-                        <span class="breadcrumb-separator">/</span>
-                        <span class="current">Сборка</span>
-                    </div>
+                    <h1><i class="fas fa-download"></i> Установка Story Time SMP</h1>
+                    <p>Всё что нужно для игры на нашем сервере в одном установщике</p>
                 </div>
 
+                <!-- Основная информация о системе -->
                 <section class="content-section">
-                    <div class="assembly-card">
-                        <div class="assembly-header">
-                            <h2><i class="fas fa-crown"></i> Официальные сборки Story Time</h2>
-                            <p>Выберите оптимальный вариант для вашего компьютера и предпочтений</p>
-                        </div>
+                    <div class="assembly-card legend-card">
+                        <h2><i class="fas fa-rocket"></i> Как устроена наша система установки</h2>
                         
-                        <div class="assembly-info">
+                        <div class="info-grid" style="margin-top: 24px;">
                             <div class="info-item">
-                                <i class="fas fa-tag"></i>
-                                <p><strong>Версия:</strong> 1.21.1 neoforge</p>
+                                <i class="fas fa-terminal"></i>
+                                <div>
+                                    <h4>StoryTime-Manager</h4>
+                                    <p>Наша консольная программа, которая автоматически устанавливает все необходимые моды и настройки</p>
+                                </div>
                             </div>
+                            
                             <div class="info-item">
-                                <i class="fas fa-cube"></i>
-                                <p><strong>+ 70 модов</strong></p>
+                                <i class="fas fa-sync-alt"></i>
+                                <div>
+                                    <h4>Автообновление</h4>
+                                    <p>Менеджер сам проверяет обновления и предлагает установить их одним кликом</p>
+                                </div>
                             </div>
+                            
                             <div class="info-item">
-                                <i class="fas fa-palette"></i>
-                                <p><strong>Ресурспаки:</strong> Встроенные</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-highlight">
-                            <h5><i class="fas fa-bolt"></i> Преимущества наших сборок</h5>
-                            <p>Все сборки предварительно протестированы, оптимизированы и содержат необходимые ресурспаки сервера для полного погружения в игру, также вы можете кастомизировать сборки под себя без нарушения правил</p>
-                        </div>
-                    </div>
-
-                    <div class="assemblies-accordion">
-                        <div class="assembly-item new-version">
-                            <button class="assembly-header-btn" onclick="toggleAssembly('standard-v4')">
-                                <div class="assembly-title">
-                                    <span>Standard Version v0.4</span>
-                                    <div class="assembly-badge new">Новая</div>
-                                    <div class="assembly-badge">Актуальная</div>
-                                </div>
-                                <i class="fas fa-chevron-down assembly-chevron"></i>
-                            </button>
-                            <div class="assembly-content" id="standard-v4-content">
-                                <div class="assembly-description">
-                                    Новейшая стандартная сборка версии 0.4 с парочкой новых добавленных модов. Не рекомендуется для всех игроков, только для теста.
-                                </div>
-                                
-                                <div class="assembly-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-tag"></i>
-                                        <span class="detail-label">Версия:</span>
-                                        <span class="detail-value">1.21.1 v0.4</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-hdd"></i>
-                                        <span class="detail-label">Размер:</span>
-                                        <span class="detail-value">340 МБ</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-memory"></i>
-                                        <span class="detail-label">ОЗУ:</span>
-                                        <span class="detail-value">~4 ГБ минимум</span>
-                                    </div>
-                                </div>
-
-                                <div class="assembly-features">
-                                    <h4><i class="fas fa-star"></i> Новые моды</h4>
-                                    <div class="features-list">
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>SkinChanger</span>
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>FTB Teams</span>
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>FTB Library</span>
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>Distant Horizons API</span>
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>Architectury API</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="assembly-actions">
-                                    <button class="download-assembly-btn" onclick="downloadAssembly('standard-v4')">
-                                        <i class="fas fa-download"></i> Скачать сборку
-                                    </button>
-                                    <span class="file-size">340 МБ</span>
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Безопасность</h4>
+                                    <p>Все файлы проверяются на целостность перед установкой</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="assembly-item new-version">
-                            <button class="assembly-header-btn" onclick="toggleAssembly('enhanced-v4')">
-                                <div class="assembly-title">
-                                    <span>Optimal Version v0.4</span>
-                                    <div class="assembly-badge new">Новая</div>
-                                    <div class="assembly-badge">Актуальная</div>
-                                </div>
-                                <i class="fas fa-chevron-down assembly-chevron"></i>
-                            </button>
-                            <div class="assembly-content" id="enhanced-v4-content">
-                                <div class="assembly-description">
-                                    Новейшая стандартная сборка версии 0.4 с парочкой новых добавленных модов. Рекомендуется для всех игроков.
-                                </div>
-                                
-                                <div class="assembly-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-tag"></i>
-                                        <span class="detail-label">Версия:</span>
-                                        <span class="detail-value">1.21.1 v0.4</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-hdd"></i>
-                                        <span class="detail-label">Размер:</span>
-                                        <span class="detail-value">886 МБ</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-memory"></i>
-                                        <span class="detail-label">ОЗУ:</span>
-                                        <span class="detail-value">~4 ГБ минимум</span>
-                                    </div>
-                                </div>
-
-                                <div class="assembly-features">
-                                    <h4><i class="fas fa-star"></i> Новые моды</h4>
-                                    <div class="features-list">
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>Все моды из Optimal Version v0.4</span>
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>Traveler's Titles</span>
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>Item Highlighter</span>
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="fas fa-check"></i>
-                                            <span>InventoryHUD+</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="assembly-actions">
-                                    <button class="download-assembly-btn" onclick="downloadAssembly('enhanced-v4')">
-                                        <i class="fas fa-download"></i> Скачать сборку
-                                    </button>
-                                    <span class="file-size">886 МБ</span>
+                            
+                            <div class="info-item">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <h4>Настройка под вас</h4>
+                                    <p>Автоматическое определение папки Minecraft и версии игры</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="alert alert-info" style="margin-top: 24px;">
-                        <i class="fas fa-info-circle"></i> <strong>Устаревшие сборки</strong> перемещены в <a href="archive.html" class="link-button">Архив сборок</a> для удобного доступа к предыдущим версиям.
-                    </div>                
-
-                    <div class="additional-content">
-                        <div class="content-card">
-                            <h3><i class="fas fa-question-circle"></i> Часто задаваемые вопросы</h3>
-                            
-                            <div class="faq-item">
-                                <h4>Как установить сборку?</h4>
-                                <p>Скачайте архив с сборкой, распакуйте его в папку с модами вашего лаунчера, затем выберите соответствующий профиль в лаунчере и запустите игру.</p>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <h4>Можно ли добавлять свои моды в сборку?</h4>
-                                <p>Да, вы можете добавлять свои моды, но убедитесь, что они совместимы с версией игры и не нарушают правила сервера.</p>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <h4>Что делать если сборка не запускается?</h4>
-                                <p>Проверьте, что у вас установлена нужная версия Java, достаточно оперативной памяти и все файлы скачаны корректно. Если проблема persists, обратитесь в техподдержку.</p>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <h4>Обновляются ли сборки?</h4>
-                                <p>Да, сборки регулярно обновляются при выходе новых версий модов или исправлений. Следите за announcements в нашем Discord.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="content-card">
-                            <h3><i class="fas fa-life-ring"></i> Техническая поддержка</h3>
-                            <p>Если у вас возникли проблемы с установкой или использованием сборок, обратитесь за помощью:</p>
-                            <ul>
-                                <li>Discord: <strong>#помощь</strong> канал</li>
-                                <li>Проверьте руководство по установке на главной странице</li>
-                                <li>Убедитесь, что ваш ПК соответствует системным требованиям</li>
-                            </ul>
-                        </div>
-                    </div>                
                 </section>
+
+                <!-- Шаг 1: Скачивание менеджера -->
+                <section class="content-section">
+                    <h2><span class="step-number">1</span> Скачайте установщик</h2>
+                    <p>Выберите версию для вашей операционной системы:</p>
+                    
+                    <div class="download-options">
+                        <div class="download-card primary">
+                            <div class="download-card-header">
+                                <i class="fab fa-windows"></i>
+                                <div>
+                                    <h4>Windows</h4>
+                                    <p class="download-subtitle">Portable .exe файл</p>
+                                </div>
+                            </div>
+                            <p class="download-description">Не требует установки. Просто скачайте и запустите</p>
+                            <button class="download-btn primary" onclick="downloadManager('windows')">
+                                <i class="fas fa-download"></i> Скачать для Windows
+                                <span class="file-size">~15 MB</span>
+                            </button>
+                        </div>
+                        
+                        <div class="download-card">
+                            <div class="download-card-header">
+                                <i class="fab fa-linux"></i>
+                                <div>
+                                    <h4>Linux</h4>
+                                    <p class="download-subtitle">Исполняемый файл</p>
+                                </div>
+                            </div>
+                            <p class="download-description">Для Ubuntu, Debian, Fedora и других дистрибутивов</p>
+                            <button class="download-btn" onclick="downloadManager('linux')">
+                                <i class="fas fa-download"></i> Скачать для Linux
+                                <span class="file-size">~12 MB</span>
+                            </button>
+                        </div>
+                        
+                        <div class="download-card arch">
+                            <div class="download-card-header">
+                                <i class="fab fa-linux"></i>
+                                <div>
+                                    <h4>Arch Linux</h4>
+                                    <p class="download-subtitle">AUR Package</p>
+                                </div>
+                            </div>
+                            <p class="download-description">Установка через AUR репозиторий</p>
+                            <div class="terminal-code">
+                                <code>yay -S stm</code>
+                                <button class="copy-btn" onclick="copyToClipboard('yay -S stm')">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+                            <button class="download-btn arch-btn" onclick="downloadManager('arch')">
+                                <i class="fas fa-info-circle"></i> Подробнее об установке
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Шаг 2: Подготовка к установке -->
+                <section class="content-section">
+                    <h2><span class="step-number">2</span> Подготовьте Minecraft</h2>
+                    
+                    <div class="preparation-steps">
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Запустите ваш лаунчер</h4>
+                                <p>Поддерживаются: Official Launcher, TLauncher, SKLauncher, MultiMC и другие</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Создайте новую сборку</h4>
+                                <p>Версия Minecraft: <strong>1.21.1</strong></p>
+                                <p>Назовите её как угодно, например "Story Time SMP"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Запустите и закройте</h4>
+                                <p>Запустите созданную сборку один раз, дождитесь полной загрузки игры и закройте её</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info" style="margin-top: 24px;">
+                        <i class="fas fa-lightbulb"></i> <strong>Важно:</strong> Убедитесь что у вас установлена Java 17 или новее
+                    </div>
+                </section>
+
+                <!-- Шаг 3: Установка модов -->
+                <section class="content-section">
+                    <h2><span class="step-number">3</span> Установите моды через менеджер</h2>
+                    
+                    <div class="installation-steps">
+                        <div class="installation-step">
+                            <div class="step-number-circle">1</div>
+                            <div class="step-content">
+                                <h4>Запустите StoryTime-Manager</h4>
+                                <p>Найдите скачанный файл и запустите его. Если нужно, дайте права администратора</p>
+                            </div>
+                        </div>
+                        
+                        <div class="installation-step">
+                            <div class="step-number-circle">2</div>
+                            <div class="step-content">
+                                <h4>Выберите опцию "Установить моды"</h4>
+                                <p>В открывшемся меню выберите первый вариант для установки модов</p>
+                            </div>
+                        </div>
+                        
+                        <div class="installation-step">
+                            <div class="step-number-circle">3</div>
+                            <div class="step-content">
+                                <h4>Выберите путь к Minecraft</h4>
+                                <p>Менеджер предложит найти папку автоматически или указать путь вручную</p>
+                                <p class="note">Рекомендуем выбрать автоматический поиск</p>
+                            </div>
+                        </div>
+                        
+                        <div class="installation-step">
+                            <div class="step-number-circle">4</div>
+                            <div class="step-content">
+                                <h4>Выберите тип сборки</h4>
+                                <div class="assembly-type-options">
+                                    <div class="type-option recommended">
+                                        <i class="fas fa-user"></i>
+                                        <div>
+                                            <h5>Клиентская сборка</h5>
+                                            <p>Рекомендуется! Оптимизирована для игры, содержит все необходимые моды</p>
+                                        </div>
+                                    </div>
+                                    <div class="type-option">
+                                        <i class="fas fa-server"></i>
+                                        <div>
+                                            <h5>Серверная сборка</h5>
+                                            <p>Только для создания своего клиента. Для игры на нашем сервере не требуется, только для интузиастов</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="installation-step">
+                            <div class="step-number-circle">5</div>
+                            <div class="step-content">
+                                <h4>Дождитесь завершения</h4>
+                                <p>Менеджер скачает все моды и зависимости. Процесс займет 1-5 минут в зависимости от скорости интернета</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Шаг 4: Проверка и запуск -->
+                <section class="content-section">
+                    <h2><span class="step-number">4</span> Проверьте установку и играйте</h2>
+                    
+                    <div class="verification-card">
+                        <div class="verification-step">
+                            <div class="checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="verification-content">
+                                <h4>Проверьте папку с модами</h4>
+                                <p>Зайдите в <code>.minecraft/mods/</code> и убедитесь что файлы загрузились</p>
+                            </div>
+                        </div>
+                        
+                        <div class="verification-step">
+                            <div class="checkmark">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="verification-content">
+                                <h4>Запустите Minecraft</h4>
+                                <p>Запустите вашу сборку через лаунчер. В главном меню выберите "Мультиплеер"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="verification-step">
+                            <div class="checkmark">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="verification-content">
+                                <h4>Подключитесь к серверу</h4>
+                                <p>Добавьте сервер: <code>story-time.playit.plus</code> и присоединяйтесь к игре!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Частые проблемы и решения -->
+                <section class="content-section">
+                    <h2><i class="fas fa-question-circle"></i> Частые проблемы и решения</h2>
+                    
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Моды не скачались</h4>
+                            <p>Убедитесь что менеджер запущен с правами администратора. Проверьте подключение к интернету.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4><i class="fas fa-times-circle"></i> Игра не запускается</h4>
+                            <p>Проверьте версию Java (должна быть 17+). Убедитесь что в папке .minecraft достаточно места (минимум 2GB).</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4><i class="fas fa-search"></i> Менеджер не находит папку</h4>
+                            <p>Укажите путь вручную: скопируйте полный путь к папке .minecraft вашей сборки.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4><i class="fas fa-sync"></i> Обновление модов</h4>
+                            <p>Просто запустите StoryTime-Manager снова и выберите опцию "Обновить моды".</p>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="content-footer">
+                    <div class="footer-content">
+                        <p>© 2026 Story Time SMP. Все права защищены.</p>
+                    </div>
+                </footer>
             </div>
         </div>
 
@@ -240,27 +306,24 @@
         </div>
     </div>
 
-    <div class="modal-overlay" id="downloadModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-download"></i> Подтверждение скачивания</h3>
-                <button class="close-modal" onclick="closeModal()">&times;</button>
-            </div>
-            
-            <div id="modalMessage">
-                Вы будете перенаправлены на Google Disk для скачивания выбранной сборки.
-            </div>
-
-            <div class="modal-actions">
-                <button class="btn-secondary" onclick="closeModal()">Отмена</button>
-                <button class="btn-primary" onclick="confirmDownload()" id="confirmDownloadBtn">
-                    <i class="fas fa-external-link-alt"></i> Перейти к скачиванию
-                </button>
-            </div>
-        </div>
-    </div>
-
     <script src="../js/main.js"></script>
     <script src="../js/assemblies.js"></script>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                if (window.stmManager) {
+                    window.stmManager.showNotification('success', 'Скопировано!', 'Команда скопирована в буфер обмена');
+                }
+            });
+        }
+        
+        function openDiscord() {
+            if (window.stmManager) {
+                window.stmManager.openDiscord();
+            } else {
+                window.open('https://discord.gg/storytime', '_blank');
+            }
+        }
+    </script>
 </body>
 </html>
