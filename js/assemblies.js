@@ -217,13 +217,13 @@ class InstallationManager {
         
         switch(type) {
             case 'windows':
-                url = 'https://download.storytime-mc.ru/manager/storytime-manager.exe';
+                url = 'https://drive.google.com/file/d/1z1LUyy704r7EJKvAu2x6MP6bX7exEW7i/view?usp=sharing';
                 filename = 'storytime-manager.exe';
                 title = 'Скачивание для Windows';
                 message = 'Загружаем portable версию менеджера...';
                 break;
             case 'linux':
-                url = 'https://download.storytime-mc.ru/manager/storytime-manager-linux';
+                url = 'https://drive.google.com/file/d/13eSCApoCfLPdGvhleCcYZjejhRYQIzmq/view?usp=sharing';
                 filename = 'storytime-manager';
                 title = 'Скачивание для Linux';
                 message = 'Загружаем исполняемый файл для Linux...';
